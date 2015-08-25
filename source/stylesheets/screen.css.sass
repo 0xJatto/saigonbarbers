@@ -1,0 +1,235 @@
+//
+// Main Stylesheet
+//
+
+@import "compass"
+@import "h5bp"
+@import "bourbon/bourbon"
+@import "base/base"
+
+// HTML5 Boilerplate Styles
+@include h5bp-normalize
+@include h5bp-base-styles
+
+// Susy Grid Systems - choose one to customize
+// @import "grid/fixed"
+// @import "grid/magic"
+
+// Font Awesome icons
+// @import "font-awesome"
+
+// Your own styles go here.
+
+$dark-brown: #8F6130
+$light-brown: #E0B280
+$white: #FFF
+$dark: #2F2919
+$black: #000
+$border: #876D4C
+
+$base-font-size: rem(20)
+$base-line-height: rem(22)
+
+=font($a: none)
+  @if $a == bold
+    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
+    font-weight: 600
+    font-stretch: normal
+  @else if $a == medium
+    font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
+    font-weight: 500
+    font-stretch: normal
+  @else if $a == light
+    font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
+    font-weight: 300
+    font-stretch: normal
+  @else if $a == thin
+    font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif
+    font-weight: 200
+    font-stretch: normal
+  @else
+    font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
+    font-weight: 400
+    font-stretch: normal
+
+p
+  +font
+
+html, body
+  height: 100%
+  background-color: $light-brown
+
+body
+  min-height: 100%
+  font-size: $base-font-size
+  line-height: $base-line-height
+
+a
+  +link-colors($white, $dark-brown)
+  &:hover
+    font-style: italic
+
+h1, h2, h3, p, .city
+  font-size: rem(20)
+
+h1
+  color: #999
+  line-height: 1em
+  display: inline
+  color: $white
+  +font(bold)
+  line-height: rem(21)
+  letter-spacing: -0.05px
+h2
+  display: inline
+  +font(medium)
+  color: $dark
+  font-size: rem(20)
+  line-height: rem(27)
+  letter-spacing: -0.1px
+h3
+  +font(bold)
+  letter-spacing: -1px
+  +background(image-url("/images/icons/dash.png"))
+  background-repeat: no-repeat
+  background-position: 0 57%
+  text-indent: 25px
+  margin: 0
+
+kbd
+  background-color: #f5f5f5
+  border: 1px solid #dedede
+  padding: 0px 3px 2px
+footer
+  margin-top: 3em
+  text-align: right
+
+.logo
+  margin: 0 auto
+  padding-top: 10px
+  width: 310px
+  height: 100px
+  background-color: $light-brown
+
+.container
+  // Force images to scale down to their container widths.
+  img
+    max-width: 100%
+    height: auto
+  width: 280px
+  background-color: $light-brown
+  margin: 13px auto 15px
+  height: 100%
+
+.cities
+  margin-top: 37px
+  table
+    width: 100%
+    caption
+      text-align: left
+      margin-bottom: 0.3em
+    tfoot
+      a
+        color: $white
+    tr
+      margin-bottom: 0.25em
+      td
+        border-bottom: 2px solid $border
+        padding: 0.4em 0
+        &.city
+          width: 250px
+          a
+            color: $white
+            +font
+        &.cafecount
+          padding: 0.5em 0 0.2em
+          a
+            color: $dark-brown
+            text-align: center
+
+.icon a
+  &:hover
+    margin-left: 3px
+
+small
+  font-size: rem(12)
+  line-height: rem(15)
+  color: $dark
+
+
+footer
+  margin-top: 250px
+  margin-bottom: 0
+  padding-bottom: 15px
+  text-align: left
+  color: $dark
+  background-color: $light-brown
+  height: 180px
+  a
+    +link-colors($dark, $dark-brown)
+    +font(medium)
+    &:hover
+      font-style: normal
+  &:before
+    height: 2px
+    background: $dark //#423400
+    width: 60px
+    display: block
+    content: ""
+    margin: 25px 0
+  section
+    margin-bottom: 0.5em
+    border-bottom: 1px solid $dark
+    display: block
+    float: left
+    width: 100%
+    padding-bottom: 0.4em
+  ul
+    margin-right: 1em
+    padding-left: 0
+    margin-top: 0
+    margin-bottom: 0
+    float: left
+    &:last-child
+      margin-right: 0
+  .creators
+    p
+      float: left
+      margin: 0 1em 0 0
+  .open-source
+    li
+      float: left
+      margin: 0
+    .os-label
+      width: 180px
+    .github-link
+      img
+        margin-top: -3px
+      width: 60px
+      margin-left: 25px
+  .email
+    margin-left: 24px
+    img
+      margin-top: -3px
+  nav
+    ul li
+      float: left
+      margin-right: 10px
+      margin-bottom: 15px
+      &:first-child
+        margin-right: 15px
+      &:last-child
+        margin-right: 0
+    .about-link
+      margin-left: 12px
+    .contribute-link
+      margin-left: 4px
+  section, ul li
+    line-height: rem(15)
+
+
+// H5BP helper classes & mixins.
+// @include h5bp-helpers
+
+// Print styles.
+@include h5bp-media

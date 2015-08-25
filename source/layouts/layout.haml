@@ -1,0 +1,118 @@
+!!! 5
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7]    <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8]    <html class="no-js lt-ie9">
+<!--[if gt IE 8]><!-->
+%html{:class => "no-js"}
+  <!--<![endif]-->
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge"}
+
+    -# Pull in the page title
+    %title= current_page.data.title
+
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "author", :content => ""}
+    -# You may wish to remove the 'initial scale=1.0' for non-responsive layouts
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+
+    -# maximum-scale = 1.0 ?
+
+    -# Place favicon.ico and apple-touch-icon(s) in the root directory
+
+    = stylesheet_link_tag "screen"
+    = javascript_include_tag "libs/modernizr-2.7.1.min"
+
+  %body{:class => current_page.data.bodyclass}
+    .logo
+      - link_to '/' do
+        = image_tag "/images/logo-heading-uncompressed@2x.png", :alt => "#{current_page.data.title}"
+    .container
+      %header
+        %h1
+          Explore the world’s best third wave cafes and roasters in seconds.
+        %h2
+          Take a fast-forward peek inside a cafe before you visit.
+      #main-content{:role => "main"}
+        -# Page content gets rendered here
+        = yield
+
+      %footer
+        %section.creators
+          %p
+            %small
+              %em
+                &copy; #{DateTime.now.strftime("%Y")}
+          %ul
+            %li.name
+              %small Yury
+            %li.twitter
+              %small= link_to "@ytspar", "http://twitter.com/ytspar"
+          %ul
+            %li.name
+              %small Alexej
+            %li.twitter
+              %small= link_to "@heyalexej", "http://twitter.com/heyalexej"
+          %ul
+            %li.name
+              %small Nico
+            %li.twitter 
+              %small= link_to "@nicoappel", "https://twitter.com/nicoappel"
+        %section.open-source
+          %ul
+            %li.os-label
+              %small
+                This project is Open Source
+            %li.github-link
+              %small
+                - link_to "http://github.com/ytspar" do
+                  = image_tag "/images/icons/github.png", :alt => "Github"
+                  Github
+        %section.contact
+          %ul
+            %li.twitter-label
+              %small
+                = image_tag "/images/icons/twitter.png", :alt => "Twitter"
+                Tweets
+            %li.link
+              %small
+                = link_to "@ristrettogram", "http://twitter.com/ytspar"
+          %ul.email
+            %li.email-label
+              %small
+                = image_tag "/images/icons/email.png", :alt => "Email"
+                Email
+            %li.link
+              %small
+                = mail_to 'us@ristrettogram.com'
+        %nav
+          %ul
+            %li.terms-link
+              %small
+                = link_to "Terms", "/terms"
+            %li.about-link
+              %small
+                = link_to "About Us", "/about-us"
+            %li.contribute-link
+              %small
+                = link_to "How to Contribute", "/contribute"
+
+
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    :javascript
+      window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>')
+
+    -# Holder.js - canvas-generated placeholder images for prototyping
+    = javascript_include_tag "libs/holder"
+
+    = javascript_include_tag "plugins", "script"
+
+    -# Google Analytics: change UA-XXXXX-X to be your site's ID.
+    -# :javascript
+      -# (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      -# function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      -# e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      -# e.src='//www.google-analytics.com/analytics.js';
+      -# r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      -# ga('create','UA-XXXXX-X');ga('send','pageview');
