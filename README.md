@@ -123,7 +123,7 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 - City files with Instagram links
 - Static content view for about, terms
 - Contribute form
-- Tablet versions
+- Tablet versions (use [Breakpoint Sass](http://breakpoint-sass.com)?)
 
 ---
 - Oh yeah, content!
