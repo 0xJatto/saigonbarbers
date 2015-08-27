@@ -60,7 +60,6 @@ $base-line-height: rem(22)
     font-stretch: normal
 // /typography
 
-
 p
   +font
 
@@ -128,10 +127,20 @@ kbd
   img
     max-width: 100%
     height: auto
-  width: 280px
   background-color: $light-brown
   margin: 13px auto 15px
-  height: 100%
+
+body.home .container
+  width: 280px
+
+body.city .container
+  width: 320px
+  header
+    margin-top: 10px
+
+.details
+  width: 300px
+  margin: 10px auto 0
 
 .cities
   margin-top: 37px
@@ -167,6 +176,51 @@ small
   font-size: rem(12)
   line-height: rem(15)
   color: $dark
+
+.back
+  border-bottom: 3px solid $white
+  margin-bottom: 50px
+  a
+    @include hide-text
+    display: inline-block
+    width: 44px
+    height: 45px
+    background: no-repeat 0 50% url("/images/icons/arrow-left-large.png") transparent
+    &:hover
+      margin-left: -2px
+  h1
+    +font(medium)
+    font-size: rem(28)
+    display: inline-block
+    float: right
+    margin: 0.5em 0
+
+.video-container
+  margin-bottom: 12px
+  .video
+    display: block
+    width: 320px
+    height: 320px
+    border-top: 1px solid $white
+    border-bottom: 3px solid $dark
+    //@include hide-text
+    // cursor: pointer
+    // Dim and color the background
+    .play-button
+      position: relative
+      margin-top: -320px
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: no-repeat 50% 50% url("/images/icons/play-button.png") rgba(225, 165, 90, 0.2)
+      -moz-transition: all .3s linear
+      -webkit-transition: all .3s linear
+      -ms-transition: all .3s linear
+      -o-transition: all .3s linear
+      transition: all .3s linear  
+      &:hover
+        background-color: transparent
 
 
 footer
@@ -219,7 +273,7 @@ footer
       width: 60px
       margin-left: 25px
   .email
-    margin-left: 24px
+    margin-left: 22px
     img
       margin-top: -3px
   nav

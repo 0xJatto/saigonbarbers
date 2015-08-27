@@ -30,17 +30,45 @@
 
     .container
       %header
-        - if current_page.data.index_options == "home"
+        - if current_page.data.bodyclass == "home"
           %h1
             Explore the world’s best third wave cafes and roasters in seconds.
           %h2
             Take a fast-forward peek inside a cafe before you visit.
-        - elsif current_page.data.index_options == "city"
+
+        - elsif current_page.data.bodyclass == "city"
+          .details.back
+            = link_to 'Back', '/'
+            %h1
+              Berlin
+
         - else
 
       #main-content{:role => "main"}
         -# Page content gets rendered here
-        = yield
+        - if current_page.data.bodyclass == "city"
+          .video-container
+            .video
+              = image_tag "/images/temp/image-placeholder-the_barn.jpg"
+              - link_to 'http://instagram.com' do
+                .play-button
+
+          .video-container
+            .video
+              = image_tag "/images/temp/image-placeholder-silo.jpg"
+              - link_to 'http://instagram.com' do
+                .play-button
+
+              = yield
+              
+              -# https://forum.middlemanapp.com/t/problems-with-link-to-used-with-the-block/1319
+              -# - link_to 'Play video', 'http://instagram.com' do
+              -#  .play-button
+
+
+
+        -else
+          = yield
       
       -# Footer
       = partial "partials/footer"
