@@ -109,7 +109,6 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 
 - Test on retina (need 2x, 3x, whatever? SVG?)
 - Generate cities table dynamically from YAML files
-- Adjust layout to accomodate cities view or create a separate cities layout - then we'd need partials or similar to break off the header and footer
 - Compress/minify CSS, Javascript
 - Production deploy to S3, Route53 config
 - Bower/Gulp process to replace locked in place HTML5 boilerplate and so on
@@ -118,7 +117,15 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 - Apple touch icons
 - Press kit with high res assets
 
+*Views*
 
+- City view
+- City files with Instagram links
+- Static content view for about, terms
+- Contribute form
+- Tablet versions
+
+---
 - Oh yeah, content!
 
 **Maybe?**
