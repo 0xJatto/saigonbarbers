@@ -133,6 +133,7 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 - Make slightly fluid columns? that is, make the main container, say 87.5% width, max width like 375 or iPhone 6 dimensions
 - Buy short domain?
 - README: change the header image to one in the repo? (`![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title"`)
+- SVG icons?
 
 
 ## License
