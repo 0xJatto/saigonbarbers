@@ -10,7 +10,7 @@
     %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge"}
 
     -# Pull in the page title
-    %title= current_page.data.title
+    %title= current_page.data.title ? "ristrettogram - " +current_page.data.title : "ristrettogram - " + yield_content(:title)
 
     %meta{:name => "description", :content => ""}
     %meta{:name => "author", :content => ""}
@@ -25,15 +25,21 @@
     = javascript_include_tag "libs/modernizr-2.7.1.min"
 
   %body{:class => current_page.data.bodyclass}
-    .logo
-      - link_to '/' do
-        = image_tag "/images/logo-heading-uncompressed@2x.png", :alt => "#{current_page.data.title}"
+    - if current_page.data.bodyclass == "city"
+      .logo.city
+        - link_to '/' do
+          = image_tag "/images/logo-heading-city.png", :alt => "#{current_page.data.title}"
+    - else
+      .logo.general
+        - link_to '/' do
+          = image_tag "/images/logo-heading-general.png", :alt => "#{current_page.data.title}"
     .container
       %header
-        %h1
-          Explore the world’s best third wave cafes and roasters in seconds.
-        %h2
-          Take a fast-forward peek inside a cafe before you visit.
+        - if current_page.data.bodyclass == "home"
+          %h1
+            Explore the world’s best third wave cafes and roasters in seconds.
+          %h2
+            Take a fast-forward peek inside a cafe before you visit.
       #main-content{:role => "main"}
         -# Page content gets rendered here
         = yield
