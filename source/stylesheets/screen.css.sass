@@ -2,14 +2,17 @@
 // Main Stylesheet
 //
 
+// Imports
 @import "compass"
 @import "h5bp"
 @import "bourbon/bourbon"
 @import "base/base"
+// /imports
 
 // HTML5 Boilerplate Styles
 @include h5bp-normalize
 @include h5bp-base-styles
+// /boilerplate
 
 // Susy Grid Systems - choose one to customize
 // @import "grid/fixed"
@@ -18,14 +21,18 @@
 // Font Awesome icons
 // @import "font-awesome"
 
-// Your own styles go here.
-
+// Colors
 $dark-brown: #8F6130
 $light-brown: #E0B280
-$white: #FFF
 $dark: #2F2919
+
+$white: #FFF
 $black: #000
+
 $border: #876D4C
+// /colors
+
+// Typography
 
 $base-font-size: rem(20)
 $base-line-height: rem(22)
@@ -51,16 +58,16 @@ $base-line-height: rem(22)
     font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
     font-weight: 400
     font-stretch: normal
+// /typography
+
 
 p
   +font
 
 html, body
-  height: 100%
   background-color: $light-brown
 
 body
-  min-height: 100%
   font-size: $base-font-size
   line-height: $base-line-height
 
@@ -73,20 +80,21 @@ h1, h2, h3, p, .city
   font-size: rem(20)
 
 h1
+  +font(bold)
   color: #999
   line-height: 1em
   display: inline
   color: $white
-  +font(bold)
   line-height: rem(21)
   letter-spacing: -0.05px
+
 h2
-  display: inline
   +font(medium)
+  display: inline
   color: $dark
-  font-size: rem(20)
   line-height: rem(27)
   letter-spacing: -0.1px
+
 h3
   +font(bold)
   letter-spacing: -1px
@@ -108,9 +116,6 @@ kbd
   background-color: #f5f5f5
   border: 1px solid #dedede
   padding: 0px 3px 2px
-footer
-  margin-top: 3em
-  text-align: right
 
 .logo
   margin: 0 auto
@@ -169,7 +174,6 @@ footer
   margin-top: 250px
   margin-bottom: 0
   padding-bottom: 15px
-  text-align: left
   color: $dark
   background-color: $light-brown
   height: 180px
