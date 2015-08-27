@@ -1,14 +1,31 @@
-# Amicus: your expert toolkit for rapid web prototyping
+![ristrettogram](https://dl.dropboxusercontent.com/u/225019/ristrettogram-logo.png)
 
-## What is it?
+# ristrettogram
 
-Amicus is a clean project starting point for the [Middleman](http://middlemanapp.com/) static site generator. It features [HTML5 Boilerplate](http://html5boilerplate.com/), [Haml](http://haml-lang.com/), [Sass](http://sass-lang.com/), [Compass](http://compass-style.org/), [Susy](http://susy.oddbird.net/) grid system, and lots of best practices.
+## What 
+Short video clips ([hyperlapse](https://hyperlapse.instagram.com) or timelapse) of third wave coffee shops, pulled from [Instagram](http://instagram.com/ytspar).
 
-## It's Responsive!
+## Tech
 
-Amicus now comes with a mobile-first responsive grid system by default (see ```source/stylesheets/grid/_magic.sass```). Based on the [Susy "Magic" grid system](http://susy.oddbird.net/demos/magic/), it's ready to customize for your projects.
+- [Middleman](http://middlemanapp.com/) - static site generator
+- [HTML5 Boilerplate](http://html5boilerplate.com/)
+- [Amicus](https://github.com/nathos/amicus) - excellent Middleman base
+- [Livereload](https://middlemanapp.com/basics/development_cycle/) is enabled by default
+- [SassToCSS](http://www.sasstoscss.com)
+
+### Markup
+- [Haml](http://haml-lang.com/)
+
+### CSS
+- [Sass](http://sass-lang.com/)
+- [Compass](http://compass-style.org/)
+- [Bourbon](http://bourbon.io) and [Neat](http://neat.bourbon.io) for typography
+- [Susy](http://susy.oddbird.net/) - grid system *(not currently using but included)*
+
 
 ## How do I use it?
+
+*(from the Amicus docs)*
 
 Start by installing [Bundler](http://gembundler.com/), if you don't already have it:
 
@@ -16,51 +33,106 @@ Start by installing [Bundler](http://gembundler.com/), if you don't already have
 gem install bundler
 ```
 
-Then just download the [latest source](https://github.com/nathos/amicus/archive/master.zip) or if you prefer, clone the repository down to your local machine:
+Then, clone the repository down to your local machine:
 
 ```
-git clone http://github.com/nathos/amicus.git my_new_project
+git clone git@github.com:ytspar/ristrettogram.git however_you_want_to_name_your_copy_of_ristrettogram
 ```
 
-Finally, do a ```bundle install``` to install the required gems -- even Middleman itself!
+Finally, do a ```bundle install``` to install the required gems -- even Middleman itself.
 
 Use ```middleman``` to do your live development and ```middleman build``` to render your static file output to the ```/build/``` directory.
 
+Use ```middleman server``` to build dynamically on development.
+
+**Deploy on S3**
+
+`[PENDING]`
+
 For full Middleman documentation, visit the [Middleman website](http://middlemanapp.com/).
 
+**Commit format**
 
-## Middleman Template
+From [semantic commit messages](http://seesparkbox.com/foundry/semantic_commit_messages),
 
-Middleman now supports project templates. To use Amicus as a template, clone the Git repository into ```~/.middleman```, like so:
+```
+feat: add hat wobble
+^--^  ^------------^
+|     |
+|     +-> Summary in present tense.
+|
++-------> Type: chore, docs, feat, fix, refactor, style, or test.
+```
 
-```git clone http://github.com/nathos/amicus.git ~/.middleman/amicus```
+**Examples**
+
+```
+chore: add Oyster build script
+docs: explain hat wobble
+feat: add beta sequence
+fix: remove broken confirmation message
+refactor: share logic between 4d3d3d3 and flarhgunnstow
+style: convert tabs to spaces
+test: ensure Tayne retains clothing
+```
+
+To make this easier, use: [git-semantic-commits](https://github.com/fteem/git-semantic-commits)
+
+
+## Middleman template
+*From Amicus docs - have not tested with this repo*
+
+Middleman now supports project templates. To use **ristrettogram** as a template, clone the Git repository into ```~/.middleman```, like so:
+
+```git clone git@github.com:ytspar/ristrettogram.git ~/.middleman/ristrettogram```
 
 then use the new template argument for the ```middleman init``` command:
 
-```middleman init my_new_project --template=amicus```
-
-Easy peasy!
+```middleman init my_new_project --template=ristrettogram```
 
 
-## What other cool stuff is in here?
+## What cruft have we included?
 
-The default [Haml](http://haml-lang.com/) layout is based on [HTML5 Boilerplate](http://html5boilerplate.com/), and is fully commented. (Don't worry, those comments aren't rendered out to your build directory)
+[Susy](http://susy.oddbird.net/) is the default grid system. Not currently used, but available.
 
-[Susy](http://susy.oddbird.net/) is the default grid system.
-
-An included Ruby helper method to generate image placeholders, powered by [Holder.js](http://imsky.github.com/holder/).
+An included Ruby helper method to generate image placeholders, powered by [Holder.js](http://imsky.github.com/holder/). Haven't used it, but it's there.
 
 
-## Comments & Suggestions?
+## Comments, suggestions?
 
-Send me a [message](https://github.com/nathos) or submit an [issue](https://github.com/nathos/amicus/issues). Thanks!
+Send a [message on Github](https://github.com/ytspar) or submit an [issue](https://github.com/ytspar/ristrettogram/issues), or [via Twitter, @ristrettogram](http://twitter.com/ristrettogram).
+
+### To do
+**In no particular order,**
+
+**Planned**
+
+- Test on retina (need 2x, 3x, whatever? SVG?)
+- Generate cities table dynamically from YAML files
+- Adjust layout to accomodate cities view or create a separate cities layout - then we'd need partials or similar to break off the header and footer
+- Compress/minify CSS, Javascript
+- Production deploy to S3, Route53 config
+- Bower/Gulp process to replace locked in place HTML5 boilerplate and so on
+- Add Google Analytics, heatmap etc (Segment?)
+- Favicon
+- Apple touch icons
+- Press kit with high res assets
+
+
+- Oh yeah, content!
+
+**Maybe?**
+
+- Make slightly fluid columns? that is, make the main container, say 87.5% width, max width like 375 or iPhone 6 dimensions
+- Buy short domain?
+- README: change the header image to one in the repo? (`![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title"`)
 
 
 ## License
 
 Following the lead of [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) here...
 
-Major components:
+**Major components**
 
 * HTML5 Boilerplate: MIT license
 * Normalize.css: MIT license
@@ -68,6 +140,15 @@ Major components:
 * jQuery: MIT/GPL license
 * Susy: MIT license
 
-Everything else:
+**License**
 
 * MIT license -- see LICENSE.md
+
+### Colophon
+
+On the road between Berlin, Bangkok, Chiang Mai and Pai, among other places. 
+
+**Built using**
+
+- [Sketch](http://www.bohemiancoding.com/sketch/) - design
+- [Sublime](http://www.sublimetext.com) - code
