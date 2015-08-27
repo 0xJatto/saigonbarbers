@@ -135,6 +135,7 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 - Buy short domain?
 - README: change the header image to one in the repo? (`![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title"`)
 - SVG icons?
+- Animate logo box opening and closing on hover
 
 
 ## License
