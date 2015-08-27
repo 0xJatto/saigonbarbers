@@ -116,6 +116,7 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 - Favicon
 - Apple touch icons
 - Press kit with high res assets
+- Optimize images
 
 *Views*
 
