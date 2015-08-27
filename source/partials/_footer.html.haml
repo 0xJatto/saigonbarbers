@@ -1,0 +1,59 @@
+%footer
+  %section.creators
+    %p
+      %small
+        %em
+          &copy; #{DateTime.now.strftime("%Y")}
+    %ul
+      %li.name
+        %small Yury
+      %li.twitter
+        %small= link_to "@ytspar", "http://twitter.com/ytspar"
+    %ul
+      %li.name
+        %small Alexej
+      %li.twitter
+        %small= link_to "@heyalexej", "http://twitter.com/heyalexej"
+    %ul
+      %li.name
+        %small Nico
+      %li.twitter 
+        %small= link_to "@nicoappel", "https://twitter.com/nicoappel"
+  %section.open-source
+    %ul
+      %li.os-label
+        %small
+          This project is Open Source
+      %li.github-link
+        %small
+          - link_to "http://github.com/ytspar" do
+            = image_tag "/images/icons/github.png", :alt => "Github"
+            Github
+  %section.contact
+    %ul
+      %li.twitter-label
+        %small
+          = image_tag "/images/icons/twitter.png", :alt => "Twitter"
+          Tweets
+      %li.link
+        %small
+          = link_to "@ristrettogram", "http://twitter.com/ytspar"
+    %ul.email
+      %li.email-label
+        %small
+          = image_tag "/images/icons/email.png", :alt => "Email"
+          Email
+      %li.link
+        %small
+          = mail_to 'us@ristrettogram.com'
+  %nav
+    %ul
+      %li.terms-link
+        %small
+          = link_to "Terms", "/terms"
+      %li.about-link
+        %small
+          = link_to "About Us", "/about-us"
+      %li.contribute-link
+        %small
+          = link_to "How to Contribute", "/contribute"
