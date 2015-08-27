@@ -203,17 +203,15 @@ small
     height: 320px
     border-top: 1px solid $white
     border-bottom: 3px solid $dark
-    //@include hide-text
-    // cursor: pointer
-    // Dim and color the background
     .play-button
       position: relative
+      @include hide-text
       margin-top: -320px
       top: 0
       left: 0
       width: 100%
       height: 100%
-      background: no-repeat 50% 50% url("/images/icons/play-button.png") rgba(225, 165, 90, 0.2)
+      background: no-repeat 50% 50% url("/images/icons/play-button.png") rgba(225, 165, 90, 0.1)
       -moz-transition: all .3s linear
       -webkit-transition: all .3s linear
       -ms-transition: all .3s linear

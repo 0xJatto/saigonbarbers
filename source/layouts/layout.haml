@@ -58,14 +58,10 @@
               = image_tag "/images/temp/image-placeholder-silo.jpg"
               - link_to 'http://instagram.com' do
                 .play-button
+                  %span
+                    Play video
 
               = yield
-              
-              -# https://forum.middlemanapp.com/t/problems-with-link-to-used-with-the-block/1319
-              -# - link_to 'Play video', 'http://instagram.com' do
-              -#  .play-button
-
-
 
         -else
           = yield
