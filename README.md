@@ -126,7 +126,8 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 - Static content view for about, terms
 - Populate city views from YAML files
 - Contribute form
-- Tablet versions (use [Breakpoint Sass](http://breakpoint-sass.com)?)
+- Tablet versions (use [Breakpoint Sass](http://breakpoint-sass.com)?) - other options: https://github.com/zellwk/mappy-breakpoints, https://github.com/at-import/breakpoint, https://github.com/lolmaus/breakpoint-slicer
+
 
 ---
 - Oh yeah, content!
@@ -138,6 +139,8 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 - README: change the header image to one in the repo? (`![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title"`)
 - SVG icons?
 - Animate logo box opening and closing on hover
+
+
 
 
 ## License
