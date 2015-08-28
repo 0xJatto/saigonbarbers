@@ -7,6 +7,8 @@
 @import "h5bp"
 @import "bourbon/bourbon"
 @import "base/base"
+@import "type"
+
 // /imports
 
 // HTML5 Boilerplate Styles
@@ -20,45 +22,6 @@
 
 // Font Awesome icons
 // @import "font-awesome"
-
-// Colors
-$dark-brown: #8F6130
-$light-brown: #E0B280
-$dark: #2F2919
-
-$white: #FFF
-$black: #000
-
-$border: #876D4C
-// /colors
-
-// Typography
-
-$base-font-size: rem(20)
-$base-line-height: rem(22)
-
-=font($a: none)
-  @if $a == bold
-    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
-    font-weight: 600
-    font-stretch: normal
-  @else if $a == medium
-    font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
-    font-weight: 500
-    font-stretch: normal
-  @else if $a == light
-    font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
-    font-weight: 300
-    font-stretch: normal
-  @else if $a == thin
-    font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif
-    font-weight: 200
-    font-stretch: normal
-  @else
-    font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
-    font-weight: 400
-    font-stretch: normal
-// /typography
 
 p
   +font
@@ -128,15 +91,13 @@ kbd
     max-width: 100%
     height: auto
   background-color: $light-brown
-  margin: 13px auto 15px
+  margin: 10px auto 15px
 
 body.home .container
   width: 280px
 
 body.city .container
   width: 320px
-  header
-    margin-top: 10px
 
 .details
   width: 300px
@@ -193,16 +154,18 @@ small
     font-size: rem(28)
     display: inline-block
     float: right
-    margin: 0.5em 0
+    margin: 0.4em 0
 
-.video-container
+.cafe
   margin-bottom: 12px
+  float: left
   .video
     display: block
     width: 320px
     height: 320px
     border-top: 1px solid $white
     border-bottom: 3px solid $dark
+    background-color: $dark
     .play-button
       position: relative
       @include hide-text
@@ -211,17 +174,77 @@ small
       left: 0
       width: 100%
       height: 100%
-      background: no-repeat 50% 50% url("/images/icons/play-button.png") rgba(225, 165, 90, 0.1)
-      -moz-transition: all .3s linear
-      -webkit-transition: all .3s linear
-      -ms-transition: all .3s linear
-      -o-transition: all .3s linear
-      transition: all .3s linear  
+      background: no-repeat 50% 50% url("/images/icons/play-button.png") $overlay
+      @include transition(all 0.5s linear)
       &:hover
         background-color: transparent
-
+  .details
+    border-bottom: 2px solid $white
+    margin-bottom: 30px
+    .cafe-title
+      overflow: auto
+      .name
+        display: inline-block
+        width: 274px
+        float: left
+        padding-bottom: 6px
+      h2
+        +font(medium)
+        font-size: rem(18)
+        line-height: rem(20)
+        color: $white
+      .forward
+        display: inline-block
+        a
+          @include hide-text
+          float: right
+          width: 24px
+          height: 24px
+          background: no-repeat 0 50% url("/images/icons/arrow-right-small.png") transparent
+          &:hover
+            margin-left: 2px
+    .post-details
+      float: left
+      display: block
+      margin: 14px 0
+      .meta, small
+        color: $dark-brown
+        line-height: rem(12)
+      .meta.likes, .meta.username
+        margin-bottom: 2px
+      a
+        color: $dark-brown
+        &:hover
+          font-style: normal
+          color: $white
+      .username a
+        +font(medium)
+        &:hover
+          +font(medium)
+      .avatar
+        +hide-text
+        box-shadow: 0 30px $overlay-avatar inset
+        @include transition(all 0.5s linear)
+        height: 30px
+        width: 30px
+        display: block
+        margin: 2px 6px 0 0
+        float: left
+        &:hover
+          box-shadow: none
+        a
+          _
+      .left, .right
+        width: 132px
+      .left
+        float: left
+      .right
+        float: right
+        text-align: right
+        clear: right
 
 footer
+  float: left
   margin-top: 250px
   margin-bottom: 0
   padding-bottom: 15px

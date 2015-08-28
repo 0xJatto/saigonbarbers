@@ -47,19 +47,73 @@
       #main-content{:role => "main"}
         -# Page content gets rendered here
         - if current_page.data.bodyclass == "city"
-          .video-container
+          .cafe
             .video
               = image_tag "/images/temp/image-placeholder-the_barn.jpg"
               - link_to 'http://instagram.com' do
                 .play-button
+            .details
+              .cafe-title
+                .name
+                  %h2
+                    = link_to 'The Barn', '/'
+                .forward
+                  = link_to 'Forward', '/'
+              .post-details
+                - link_to '/' do
+                  .avatar{:style => "background-image: url('/images/temp/avatar-ytspar.jpg');"}
+                    %small
+                      Avatar
+                .left
+                  .meta.username
+                    %small
+                      %b
+                        = link_to '@ytspar', 'http://instagram.com/ytspar'
+                  .meta.date
+                    %small
+                      = link_to '2d ago', 'http://instagram.com/ytspar'
+                .right
+                  .meta.likes
+                    %small
+                      = link_to '@12,349 likes', 'http://instagram.com/ytspar'
+                      
+                  .meta.comments
+                    %small
+                      = link_to '455 comments', 'http://instagram.com/ytspar'
 
-          .video-container
+          .cafe
             .video
               = image_tag "/images/temp/image-placeholder-silo.jpg"
               - link_to 'http://instagram.com' do
                 .play-button
                   %span
                     Play video
+            .details
+              .cafe-title
+                .name
+                  %h2
+                    Silo Cafe a very long name so long that it stretches out the line and should expand to two lines
+                .forward
+                  = link_to 'Forward', '/'
+              .post-details
+                .avatar{:style => "background-image: url('/images/temp/avatar-nicoappel.jpg');"}
+                  %small
+                    Avatar
+                .left
+                  .meta.username
+                    %small
+                      @nicoappel
+                  .meta.date
+                    %small
+                      2d ago
+                .right
+                  .meta.likes
+                    %small
+                      12,349 likes
+                  .meta.comments
+                    %small
+                      455 comments
+
 
               = yield
 

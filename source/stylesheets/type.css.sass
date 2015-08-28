@@ -1,0 +1,43 @@
+// Colors
+$dark-brown: #8F6130
+$light-brown: #E0B280
+$dark: #2F2919
+
+$white: #FFF
+$black: #000
+
+$border: #876D4C
+
+$overlay: rgba(225, 155, 80, 0.3)
+$overlay-avatar: rgba(225, 155, 80, 0.5)
+
+//rgba(225, 165, 90, 0.1)
+// /colors
+
+// Typography
+
+$base-font-size: rem(20)
+$base-line-height: rem(22)
+
+=font($a: none)
+  @if $a == bold
+    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
+    font-weight: 600
+    font-stretch: normal
+  @else if $a == medium
+    font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
+    font-weight: 500
+    font-stretch: normal
+  @else if $a == light
+    font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
+    font-weight: 300
+    font-stretch: normal
+  @else if $a == thin
+    font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif
+    font-weight: 200
+    font-stretch: normal
+  @else
+    font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif
+    font-weight: 400
+    font-stretch: normal
+// /typography
