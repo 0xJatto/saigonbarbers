@@ -41,8 +41,9 @@
             = link_to 'Back', '/'
             %h1
               Berlin
-
         - else
+          %h1
+            About Us
 
       #main-content{:role => "main"}
         -# Page content gets rendered here
@@ -113,10 +114,7 @@
                   .meta.comments
                     %small
                       455 comments
-
-
               = yield
-
         -else
           = yield
       

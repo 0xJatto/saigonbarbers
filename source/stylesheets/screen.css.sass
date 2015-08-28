@@ -24,7 +24,7 @@
 // @import "font-awesome"
 
 p
-  +font
+  +font(medium)
 
 html, body
   background-color: $light-brown
@@ -93,7 +93,7 @@ kbd
   background-color: $light-brown
   margin: 10px auto 15px
 
-body.home .container
+body.home .container, body.content .container
   width: 280px
 
 body.city .container
@@ -242,6 +242,18 @@ small
         float: right
         text-align: right
         clear: right
+
+body.content
+  h1
+    +font(medium)
+    font-size: rem(28)
+    line-height: rem(32)
+    margin: 20px 0 0 0
+    display: block
+    letter-spacing: -0.5px
+  p
+    margin: 0.3em 0
+    letter-spacing: 0.2px
 
 footer
   float: left
