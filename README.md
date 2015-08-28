@@ -117,12 +117,14 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 - Apple touch icons
 - Press kit with high res assets
 - Optimize images
+- Test on multiple browsers and devices (Mac, Windows, iOS, Android)
 
 *Views*
 
 - City view
 - City files with Instagram links
 - Static content view for about, terms
+- Populate city views from YAML files
 - Contribute form
 - Tablet versions (use [Breakpoint Sass](http://breakpoint-sass.com)?)
 
