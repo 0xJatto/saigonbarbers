@@ -3,7 +3,12 @@
 //
 
 // Imports
+
+// Compass
 @import "compass"
+@import "compass/layout"
+@import "compass/utilities/general/min"
+
 @import "h5bp"
 @import "bourbon/bourbon"
 @import "base/base"
@@ -27,11 +32,14 @@ p
   +font(medium)
 
 html, body
-  background-color: $light-brown
+  //background-color: $light-brown
+  height: 100%
 
 body
   font-size: $base-font-size
   line-height: $base-line-height
+  background-color: $light-brown
+  +min-height(100%)
 
 a
   +link-colors($white, $dark-brown)
@@ -79,32 +87,45 @@ kbd
   border: 1px solid #dedede
   padding: 0px 3px 2px
 
+.logo-wrapper
+  width: 320px
+  padding-top: 10px
 .logo
   margin: 0 auto
-  padding-top: 10px
   width: 310px
-  background-color: $light-brown
+  img
+    width: 310px
 
 .container
+  width: 320px
   // Force images to scale down to their container widths.
   img
     max-width: 100%
     height: auto
   background-color: $light-brown
-  margin: 10px auto 15px
+  margin: 0 auto 15px
+  +min-height(800px)
 
-body.home .container, body.content .container
-  width: 280px
-
-body.city .container
+#main-content, .col
   width: 320px
+
+.header-wrapper
+  width: 320px
+  margin-top: 12px
+
+header, .cities
+  margin: 0 auto
+
+body.home
+  .cities, header
+    width: 280px
 
 .details
   width: 300px
   margin: 10px auto 0
 
 .cities
-  margin-top: 37px
+  margin-top: 40px
   table
     width: 100%
     caption
@@ -159,6 +180,8 @@ small
 .cafe
   margin-bottom: 12px
   float: left
+  &:last-child
+    margin-bottom: 10em
   .video
     display: block
     width: 320px
@@ -207,11 +230,14 @@ small
       float: left
       display: block
       margin: 14px 0
+      width: 100%
       .meta, small
         color: $dark-brown
         line-height: rem(12)
       .meta.likes, .meta.username
         margin-bottom: 2px
+      .meta
+        overflow: hidden
       a
         color: $dark-brown
         &:hover
@@ -232,8 +258,6 @@ small
         float: left
         &:hover
           box-shadow: none
-        a
-          _
       .left, .right
         width: 132px
       .left
@@ -244,6 +268,11 @@ small
         clear: right
 
 body.content
+  .container
+    width: 320px
+  .header-wrapper, #main-content
+    width: 280px
+    margin: 0 auto
   h1
     +font(medium)
     font-size: rem(28)
@@ -255,26 +284,30 @@ body.content
     margin: 0.3em 0
     letter-spacing: 0.2px
 
-footer
-  float: left
-  margin-top: 250px
-  margin-bottom: 0
-  padding-bottom: 15px
+.clearfix
+  @include clearfix
+
+#footer
   color: $dark
   background-color: $light-brown
-  height: 180px
+  +sticky-footer(180px)
+  height: 100%
+  footer
+    width: 280px
+    height: 220px
+    margin: 0 auto
+    &:before
+      height: 3px
+      background: $dark //#423400
+      width: 60px
+      display: block
+      content: ""
+      margin: 0 0 1.5em 0
   a
     +link-colors($dark, $dark-brown)
     +font(medium)
     &:hover
       font-style: normal
-  &:before
-    height: 2px
-    background: $dark //#423400
-    width: 60px
-    display: block
-    content: ""
-    margin: 25px 0
   section
     margin-bottom: 0.5em
     border-bottom: 1px solid $dark
@@ -322,9 +355,70 @@ footer
       margin-left: 12px
     .contribute-link
       margin-left: 4px
+    .home-link
+      margin-left: 9px
   section, ul li
     line-height: rem(15)
 
+@media only screen and (min-width: 688px)
+  .container, body.home .container, body.content .container
+    width: 688px
+  .col1
+    float: left
+  .col2
+    float: right
+  header
+    h1, h2
+      line-height: rem(22)
+      display: block
+      float: left
+      margin: 0.4em 0 0.2em 0
+  .cities
+    margin-top: 1.5em
+  .header-wrapper
+    margin-top: 0
+  .logo-wrapper
+  body.home, body.content
+    .logo-wrapper, .logo, .logo img, .header-wrapper, .col, #main-content
+      width: 620px
+    header
+      width: 566px
+    h1
+      font-size: rem(32)
+      line-height: rem(34)
+    h2
+      font-size: rem(26)
+      line-height: rem(28)
+    h3
+      font-size: rem(24)
+    .cities
+      width: 566px
+      margin-left: 30px
+    table tr
+      td.city, td.cafecount, td.contribute
+        font-size: rem(24)
+      td.city
+        width: 95%
+      td
+        padding: 0.5em 0
+  body.content
+    header
+      width: 688px
+    p
+      font-size: rem(22)
+  body.city
+    .logo-wrapper
+      float: left
+    .header-wrapper
+      margin: 0.3em 0 0 0
+      float: right
+    header
+      width: 100%
+    #main-content
+      width: 688px
+      margin-top: 1.5em
+    .back
+      margin: 0.8em auto 0
 
 
 // H5BP helper classes & mixins.
