@@ -11,7 +11,6 @@ Short video clips ([hyperlapse](https://hyperlapse.instagram.com) or timelapse) 
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [Amicus](https://github.com/nathos/amicus) - excellent Middleman base
 - [Livereload](https://middlemanapp.com/basics/development_cycle/) is enabled by default
-- [SassToCSS](http://www.sasstoscss.com)
 
 ### Markup
 - [Haml](http://haml-lang.com/)
@@ -107,39 +106,33 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 
 **Planned**
 
-- Test on retina (need 2x, 3x, whatever? SVG?)
-- Generate cities table dynamically from YAML files
 - Compress/minify CSS, Javascript
 - Production deploy to S3, Route53 config
 - Bower/Gulp process to replace locked in place HTML5 boilerplate and so on
 - Add Google Analytics, heatmap etc (Segment?)
-- Favicon
-- Apple touch icons
-- Press kit with high res assets
-- Optimize images
-- Test on multiple browsers and devices (Mac, Windows, iOS, Android)
 
 *Views*
 
-- City view
-- City files with Instagram links
-- Static content view for about, terms
 - Populate city views from YAML files
-- Contribute form
-- Tablet versions (use [Breakpoint Sass](http://breakpoint-sass.com)?) - other options: https://github.com/zellwk/mappy-breakpoints, https://github.com/at-import/breakpoint, https://github.com/lolmaus/breakpoint-slicer
+- Instagram API for city views
+- Contribute form (later!)
+- Content for About section
+- Link sections together
 
+*Testing*
 
----
-- Oh yeah, content!
+- Test on retina (need 2x, 3x, whatever? SVG?)
+- Test on multiple browsers and devices (Mac, Windows, iOS, Android)
+
 
 **Maybe?**
 
 - Make slightly fluid columns? that is, make the main container, say 87.5% width, max width like 375 or iPhone 6 dimensions
 - Buy short domain?
 - README: change the header image to one in the repo? (`![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title"`)
-- SVG icons?
-- Animate logo box opening and closing on hover
-
+- Make icons into SVG?
+- Press kit with high res assets
+- Localization
 
 
 
@@ -167,3 +160,6 @@ On the road between Berlin, Bangkok, Chiang Mai and Pai, among other places.
 
 - [Sketch](http://www.bohemiancoding.com/sketch/) - design
 - [Sublime](http://www.sublimetext.com) - code
+- [Icongen](http://iconogen.com/) - favicons
+- [SassToCSS](http://www.sasstoscss.com) - GUI for converting CSS to SASS; quicker than CLI sometimes
+
