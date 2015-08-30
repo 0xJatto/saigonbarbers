@@ -1,8 +1,0 @@
-- if current_page.data.bodyclass == "city"
-  .logo.city{:role => "banner"}
-    - link_to '/' do
-      = image_tag "/images/logo-heading-city.png", :alt => "#{current_page.data.title}"
-- else
-  .logo{:role => "banner"}
-    - link_to '/' do
-      = image_tag "/images/ristrettogram-logo.png", :alt => "#{current_page.data.title}"
