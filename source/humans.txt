@@ -5,11 +5,14 @@
 
     <name> -- <role> -- <twitter>
 
+    Yury Tsukerman  --   concept, frontend  --  @ytspar
+    Nico Appel      --   coffee shop idea!  --  @nicoappel
+    Alexej Friesen  --   API stuff          --  @heyalexej
+
 # THANKS
 
     <name>
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    jQuery, Modernizr
+    See README.md
