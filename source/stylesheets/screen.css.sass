@@ -88,7 +88,7 @@ kbd
   padding: 0px 3px 2px
 
 .logo-wrapper
-  margin-top: 10px
+  margin: 10px auto 0
   box-shadow: inset 0 0 0 5px $dark
   &:hover
     box-shadow: none
@@ -397,6 +397,7 @@ body.content
       margin: 0.2em 0 0 0
     .logo-wrapper
       @include transition(margin-left 0.2s linear)
+      margin: 10px 0 0 0
       &:hover
         margin-left: -10px
     #footer
@@ -436,6 +437,7 @@ body.content
   body.city
     .logo-wrapper
       float: left
+      margin-left: 5px
     .header-wrapper
       float: right
     header
