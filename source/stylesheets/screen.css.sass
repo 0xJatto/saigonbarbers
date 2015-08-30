@@ -178,7 +178,7 @@ small
     margin: 0.4em 0
 
 .cafe
-  margin-bottom: 12px
+  margin-bottom: 0.5em
   float: left
   &:last-child
     margin-bottom: 10em
@@ -361,7 +361,7 @@ body.content
     line-height: rem(15)
 
 @media only screen and (min-width: 688px)
-  .container, body.home .container, body.content .container
+  .container, body.home .container, body.content .container, #footer footer
     width: 688px
   .col1
     float: left
@@ -379,11 +379,19 @@ body.content
     margin-top: 0
   .logo-wrapper
   body.home, body.content
-    .logo-wrapper, .logo, .logo img, .header-wrapper, .col, #main-content
-      width: 620px
-    header
-      width: 566px
+    .logo-wrapper
+      width: 668px
+    .logo
+      margin: 0
+    #main-content, .col, .header-wrapper, .cities, header
+      width: 540px
+      margin: 0.2em 0 0 0
+    #footer
+      margin-top: 10em
+    .cities
+      margin-top: 1.5em
     h1
+      +font(bold)
       font-size: rem(32)
       line-height: rem(34)
     h2
@@ -391,9 +399,6 @@ body.content
       line-height: rem(28)
     h3
       font-size: rem(24)
-    .cities
-      width: 566px
-      margin-left: 30px
     table tr
       td.city, td.cafecount, td.contribute
         font-size: rem(24)
@@ -401,9 +406,16 @@ body.content
         width: 95%
       td
         padding: 0.5em 0
+    #footer footer
+      .col1
+        width: 280px
+      .col2
+        float: left
+        width: 230px
+        margin-left: 20px
+      .email, .about-link
+        margin-left: 0
   body.content
-    header
-      width: 688px
     p
       font-size: rem(22)
   body.city
@@ -419,6 +431,18 @@ body.content
       margin-top: 1.5em
     .back
       margin: 0.8em auto 0
+  #footer footer
+    height: 155px
+    margin-top: 6em
+    .col1, .col2
+      width: 320px
+    section.open-source
+      border-bottom: 0px
+    section
+      padding-bottom: 0.9em
+    .bottom
+      padding-top: 0.3em
+      float: left
 
 
 // H5BP helper classes & mixins.
