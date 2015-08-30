@@ -48,7 +48,7 @@
               Email
           %li.link
             %small
-              = mail_to 'us@ristrettogram.com'
+              = mail_to "ytspar+ristrettogram@gmail.com", "Send email"
       %nav.bottom
         %ul
           //%li.terms-link
@@ -59,7 +59,10 @@
               = link_to "About Us", "/about-us"
           %li.contribute-link
             %small
-              = link_to "Contribute", "/contribute"
+              = mail_to "ytspar+ristrettogram@gmail.com", "Contribute",
+                :title => "Email this article to a friend.",
+                :subject => "Contribute a video",
+                :body => "Instagram URL: %0D%0A Cafe name:"
           %li.home-link
             %small
               = link_to "Home", "/"
