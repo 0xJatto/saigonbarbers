@@ -88,16 +88,30 @@ kbd
   padding: 0px 3px 2px
 
 .logo-wrapper
-  width: 320px
-  padding-top: 10px
-.logo
-  margin: 0 auto
+  margin-top: 10px
+  box-shadow: inset 0 0 0 5px $dark
+  &:hover
+    box-shadow: none
   width: 310px
   img
-    width: 310px
+    margin: 0 auto
+    width: 283px
+    display: block
+
+body.general, body.home, body.content
+  .logo-wrapper
+    padding: 40px 0 10px 0
+body.city
+  .logo-wrapper
+    padding: 23px 0 11px 0
+    &:hover
+      box-shadow: inset 0 0 0 5px transparent
+      box-shadow: inset 0px -5px 0px 0px $dark
+
 
 .container
   width: 320px
+  padding-top: 10px
   // Force images to scale down to their container widths.
   img
     max-width: 100%
@@ -277,7 +291,7 @@ body.content
     +font(medium)
     font-size: rem(28)
     line-height: rem(32)
-    margin: 20px 0 0 0
+    margin: 15px 0 0 0
     display: block
     letter-spacing: -0.5px
   p
@@ -377,15 +391,14 @@ body.content
     margin-top: 1.5em
   .header-wrapper
     margin-top: 0
-  .logo-wrapper
   body.home, body.content
-    .logo-wrapper
-      width: 668px
-    .logo
-      margin: 0
     #main-content, .col, .header-wrapper, .cities, header
       width: 540px
       margin: 0.2em 0 0 0
+    .logo-wrapper
+      @include transition(margin-left 0.2s linear)
+      &:hover
+        margin-left: -10px
     #footer
       margin-top: 10em
     .cities
@@ -416,21 +429,22 @@ body.content
       .email, .about-link
         margin-left: 0
   body.content
+    h1
+      padding-top: 0
     p
       font-size: rem(22)
   body.city
     .logo-wrapper
       float: left
     .header-wrapper
-      margin: 0.3em 0 0 0
       float: right
     header
       width: 100%
     #main-content
       width: 688px
-      margin-top: 1.5em
+      margin-top: 2em
     .back
-      margin: 0.8em auto 0
+      margin: 1.5em auto 0
     footer
       margin-top: 9em
   #footer footer

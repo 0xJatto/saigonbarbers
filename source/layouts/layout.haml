@@ -21,13 +21,16 @@
 
     -# Place favicon.ico and apple-touch-icon(s) in the root directory
 
+    = partial "partials/icons"
+
     = stylesheet_link_tag "screen"
     = javascript_include_tag "libs/modernizr-2.7.1.min"
 
   %body{:class => current_page.data.bodyclass}
     .container
       .logo-wrapper
-        = partial "partials/logo"
+        - link_to '/' do
+          = image_tag "/images/logo/ristrettogram-logo.png", :alt => "ristrettogram - #{current_page.data.title}"
       .header-wrapper.col
         %header
           - if current_page.data.bodyclass == "home"
@@ -43,7 +46,7 @@
                 Berlin
           - else
             %h1
-              About Us
+              About us
 
       .clearfix
 
@@ -222,7 +225,7 @@
                   .meta.comments
                     %small
                       455 comments
-                      
+
               = yield
         -else
           = yield
