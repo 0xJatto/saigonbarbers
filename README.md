@@ -118,6 +118,7 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 - Contribute form (later!)
 - Content for About section
 - Link sections together
+- Check header flow
 
 *Testing*
 
