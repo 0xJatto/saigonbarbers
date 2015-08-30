@@ -28,6 +28,15 @@
 // Font Awesome icons
 // @import "font-awesome"
 
+.arrow-right-icon
+  @include hide-text
+  width: 24px
+  height: 24px
+  background: no-repeat 0 50% url("/images/icons/arrow-right-small.png") transparent
+  @include transition(margin-left 0.2s ease)
+  &:hover
+    margin-left: 2px
+
 p
   +font(medium)
 
@@ -104,9 +113,6 @@ body.general, body.home, body.content
 body.city
   .logo-wrapper
     padding: 23px 0 11px 0
-    &:hover
-      box-shadow: inset 0 0 0 5px transparent
-      box-shadow: inset 0px -5px 0px 0px $dark
 
 
 .container
@@ -158,6 +164,8 @@ body.home
           a
             color: $white
             +font
+        &.icon
+          @extend .arrow-right-icon
         &.cafecount
           padding: 0.5em 0 0.2em
           a
@@ -182,6 +190,7 @@ small
     width: 44px
     height: 45px
     background: no-repeat 0 50% url("/images/icons/arrow-left-large.png") transparent
+    @include transition(margin-left 0.2s ease)
     &:hover
       margin-left: -2px
   h1
@@ -233,13 +242,8 @@ small
       .forward
         display: inline-block
         a
-          @include hide-text
+          @extend .arrow-right-icon
           float: right
-          width: 24px
-          height: 24px
-          background: no-repeat 0 50% url("/images/icons/arrow-right-small.png") transparent
-          &:hover
-            margin-left: 2px
     .post-details
       float: left
       display: block
@@ -438,6 +442,11 @@ body.content
     .logo-wrapper
       float: left
       margin-left: 5px
+      @include transition(margin 0.2s linear)
+      &:hover
+        box-shadow: none
+        margin-top: -1px
+        margin-bottom: 11px  
     .header-wrapper
       float: right
     header
@@ -446,7 +455,7 @@ body.content
       width: 688px
       margin-top: 2em
     .back
-      margin: 1.5em auto 0
+      margin: 1em auto 0
     footer
       margin-top: 9em
   #footer footer
