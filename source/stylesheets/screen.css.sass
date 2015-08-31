@@ -41,7 +41,6 @@ p
   +font(medium)
 
 html, body
-  //background-color: $light-brown
   height: 100%
 
 body
@@ -52,8 +51,8 @@ body
 
 a
   +link-colors($white, $dark-brown)
-  &:hover
-    font-style: italic
+  @include transition(all 0.2s linear)
+
 
 h1, h2, h3, p, .city
   font-size: rem(20)
@@ -151,9 +150,6 @@ body.home
     caption
       text-align: left
       margin-bottom: 0.3em
-    tfoot
-      a
-        color: $white
     tr
       margin-bottom: 0.25em
       td
@@ -164,13 +160,20 @@ body.home
           a
             color: $white
             +font
+            &:hover
+              color: $dark-brown
         &.icon
-          @extend .arrow-right-icon
+          width: 24px
+          height: 24px
+          a
+            @extend .arrow-right-icon
         &.cafecount
           padding: 0.5em 0 0.2em
           a
             color: $dark-brown
             text-align: center
+            &:hover
+              color: $white
 
 .icon a
   &:hover
