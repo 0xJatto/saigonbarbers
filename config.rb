@@ -78,6 +78,14 @@ helpers do
     img
   end
 
+  # Contribute email link
+    def contribute_link
+      contribute_link = mail_to "ytspar+ristrettogram@gmail.com", "Contribute a video",
+        :title => "Email this article to a friend.",
+        :subject => "Contribute a video",
+        :body => "Instagram URL: %0D%0A Cafe name:"
+    end
+
 end
 
 # Change the CSS directory

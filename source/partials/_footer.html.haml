@@ -56,13 +56,10 @@
           //    = link_to "Terms", "/terms"
           %li.about-link
             %small
-              = link_to "About Us", "/about-us"
+              = link_to "About us", "/about-us"
           %li.contribute-link
             %small
-              = mail_to "ytspar+ristrettogram@gmail.com", "Contribute",
-                :title => "Email this article to a friend.",
-                :subject => "Contribute a video",
-                :body => "Instagram URL: %0D%0A Cafe name:"
+              = contribute_link
           %li.home-link
             %small
               = link_to "Home", "/"
