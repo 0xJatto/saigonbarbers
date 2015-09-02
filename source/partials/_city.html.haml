@@ -1,0 +1,35 @@
+- current_page.data.cafe.each do |c|
+  .cafe
+    .video
+      = image_tag "/images/temp/image-placeholder-the_barn.jpg"
+      - link_to '/' do
+        .play-button
+    .details
+      .cafe-title
+        .name
+          %h2
+            = link_to "#{cafe}", "#{ig}"
+        .forward
+          = link_to "#{cafe}", "#{ig}"
+      .post-details
+        - link_to '/' do
+          .avatar{:style => "background-image: url('/images/temp/avatar-ytspar.jpg');"}
+            %small
+              Avatar
+        .left
+          .meta.username
+            %small
+              %b
+                = link_to '@ytspar', 'http://instagram.com/ytspar'
+          .meta.date
+            %small
+              = link_to '2d ago', 'http://instagram.com/ytspar'
+        .right
+          .meta.likes
+            %small
+              = link_to '@12,349 likes', 'http://instagram.com/ytspar'
+              
+          .meta.comments
+            %small
+              = link_to '455 comments', 'http://instagram.com/ytspar'
+

@@ -88,6 +88,18 @@ helpers do
 
 end
 
+# Returns all pages under a certain directory.
+def sub_pages(dir)
+  sitemap.resources.select do |resource|
+    resource.path.start_with?(dir)
+  end
+end
+
+# e.g., in a template,
+# - sub_pages('recipes').each do |resource|
+#  = link_to resource.data.title, resource.url
+
+
 # Change the CSS directory
 # set :css_dir, "alternative_css_directory"
 
