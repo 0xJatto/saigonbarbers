@@ -87,7 +87,6 @@ helpers do
     end
 
 end
-
 # Change the CSS directory
 # set :css_dir, "alternative_css_directory"
 
@@ -108,21 +107,21 @@ configure :build do
   #   :favicon_maker_base_image => "favicon_base.svg"
 
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
-  # activate :cache_buster
+  activate :cache_buster
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
+  require "middleman-smusher"
+  activate :smusher
 
   # Or use a different image path
   # set :http_path, "/Content/images/"

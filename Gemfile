@@ -28,3 +28,6 @@ gem "bitters"
 platforms :mswin, :mingw do
    gem "wdm", "~> 0.1.0" # Windows Directory Monitor
 end
+
+### Build
+gem "middleman-smusher"
