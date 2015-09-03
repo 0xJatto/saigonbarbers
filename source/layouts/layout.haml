@@ -42,8 +42,7 @@
           - elsif current_page.data.bodyclass == "city"
             .details.back
               = link_to 'Back', '/'
-              %h1
-                #{current_page.data.city}
+              %h1= current_page.data.title
           - else
             %h1
               About us
@@ -60,26 +59,13 @@
                   %h3
                     Video tours of cafes in
                 %tbody
-                  %tr
-                    %td.city
-                      = link_to "Bangkok", "http://mysite.com"
-                    %td.cafecount
-                      = link_to "10", "http://mysite.com"
-                  %tr
-                    %td.city
-                      = link_to "Berlin", "http://mysite.com"
-                    %td.cafecount
-                      = link_to "10", "http://mysite.com"
-                  %tr
-                    %td.city
-                      = link_to "Budapest", "http://mysite.com"
-                    %td.cafecount
-                      = link_to "10", "http://mysite.com"
-                  %tr
-                    %td.city
-                      = link_to "Chiang Mai", "http://mysite.com"
-                    %td.cafecount
-                      = link_to "10", "http://mysite.com"
+                  - sitemap.resources.each do |page|
+                    - if page.data.bodyclass == "city"
+                      %tr
+                        %td.city
+                          =link_to page.data.title, page.url
+                        %td.cafecount
+                          = link_to page.data.cafes.length, page.url
                   %tr
                     %td.city
                       &nbsp;

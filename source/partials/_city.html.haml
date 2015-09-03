@@ -2,6 +2,34 @@
 -# respective city haml files.
 
 - current_page.data.cafes.each do |cafe|
-    %video{:src => "#{cafe.video}"}
-    %h3=cafe.cafe_name
-    %p=cafe.link
+  .cafe
+    .video{:style => "height: #{cafe.video_height.to_i / 2}px;"}
+      %video{:src => "#{cafe.video}", :loop => "true"}
+      - link_to "#{cafe.video}" do
+        .play-button{:style => "margin-top: -#{cafe.video_height.to_i / 2 + 4}px;"}
+    .details
+      .cafe-title
+        .name
+          %h2
+            = link_to "#{cafe.cafe_name}", "#{cafe.link}"
+        .forward
+          = link_to "#{cafe.cafe_name}", "#{cafe.link}"
+      .post-details
+        - link_to '/' do
+          .avatar{:style => "background-image: url(#{cafe.user_image});"}
+            %small= cafe.user_name
+        .left
+          .meta.username
+            %small
+              = link_to "@#{cafe.user_name}", "http://instagram.com/#{cafe.user_name}"
+          .meta.date
+            %small
+              = link_to '2d ago', 'http://instagram.com/ytspar'
+        .right
+          .meta.likes
+            %small
+              = link_to pluralize(cafe.likes, 'like'), cafe.link
+              
+          .meta.comments
+            %small
+              = link_to pluralize(cafe.comments, 'comment'), cafe.link
