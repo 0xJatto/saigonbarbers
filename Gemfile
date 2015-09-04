@@ -33,3 +33,5 @@ end
 ##group :build do
 gem "middleman-smusher"
 gem 'middleman-s3_sync'
+
+gem 'middleman-dotenv', '~> 1.0'

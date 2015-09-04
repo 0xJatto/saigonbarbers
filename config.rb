@@ -1,3 +1,6 @@
+# Uses .env in the root of the project
+activate :dotenv
+
 ###
 # Compass
 ###
@@ -153,6 +156,11 @@ activate :s3_sync do |s3_sync|
   s3_sync.encryption                 = false
   s3_sync.prefix                     = ''
   s3_sync.version_bucket             = false
+end
+
+configure :development do
+  activate :dotenv, env: '.env.development'
+  set :debug_assets, true
 end
 
 # Skip locale validation (and validation warnings)

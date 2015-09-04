@@ -5,3 +5,4 @@ bin/
 tmp/
 .bundle/
 .s3_sync
+.env*
