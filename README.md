@@ -15,6 +15,7 @@ Find the specs on Zeplin: [bit.ly/rgzeplin](http://bit.ly/rgzeplin)
 - [Amicus](https://github.com/nathos/amicus) - excellent Middleman base
 - [Livereload](https://middlemanapp.com/basics/development_cycle/) is enabled by default
 - [middleman-s3_sync](https://github.com/fredjean/middleman-s3_sync) - for deploying to S3
+- [middleman-minify-html](https://github.com/middleman/middleman-minify-html) - for minifying HTML
 
 ### Markup
 - [Haml](http://haml-lang.com/)

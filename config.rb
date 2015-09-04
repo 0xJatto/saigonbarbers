@@ -122,6 +122,12 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
+  # gzip
+  activate :gzip
+
+  # Minify HTML
+  activate :minify_html
+
   # Compress PNGs after build
   # First: gem install middleman-smusher
   require "middleman-smusher"
