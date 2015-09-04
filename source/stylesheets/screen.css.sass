@@ -125,6 +125,35 @@ body.city
   margin: 0 auto 15px
   +min-height(800px)
 
+.vjs-default-skin
+  .vjs-big-play-button
+    left: 50%
+    margin-left: -1.4em
+    top: 52%
+    margin-top: -1.4000000000000001em
+    border: 4px solid $white
+    background-color: $overlay
+    @include border-radius(10em)
+    width: 2.5em
+    height: 2.5em
+    &:before
+      text-shadow: none
+      left: 5px
+      top: 5px
+      font-size: 1.6em
+      line-height: 1.4em
+      color: $white
+  &.vjs-has-started .vjs-control-bar.vjs-control-bar
+    display: none
+
+.vjs-default-skin .vjs-control:focus:before,
+.vjs-default-skin .vjs-control:hover:before
+  color: red
+  text-shadow: 0em 0em 1em rgba(255, 255, 255, 1)   
+
+.vjs-default-skin:hover .vjs-big-play-button, .vjs-default-skin .vjs-big-play-button:focus
+  box-shadow: none
+
 #main-content, .col
   width: 320px
 
@@ -211,8 +240,6 @@ small
     margin-bottom: 10em
   .video
     display: block
-    width: 320px
-    height: 320px
     border-top: 1px solid $white
     border-bottom: 1px solid $dark
     .play-button
@@ -236,7 +263,6 @@ small
         display: inline-block
         width: 274px
         float: left
-        padding-bottom: 6px
       h2
         +font(medium)
         font-size: rem(18)
@@ -250,13 +276,11 @@ small
     .post-details
       float: left
       display: block
-      margin: 14px 0
+      margin: 10px 0
       width: 100%
       .meta, small
         color: $dark-brown
-        line-height: rem(12)
-      .meta.likes, .meta.username
-        margin-bottom: 2px
+        line-height: rem(14)
       .meta
         overflow: hidden
       a
