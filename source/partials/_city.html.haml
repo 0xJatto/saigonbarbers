@@ -25,7 +25,8 @@
               = link_to "@#{cafe.user_name}", "http://instagram.com/#{cafe.user_name}"
           .meta.date
             %small
-              = link_to '2d ago', 'http://instagram.com/ytspar'
+              = link_to '', 'http://instagram.com/ytspar', class: 'time-link', 'data-time': cafe.created_time
+
         .right
           .meta.likes
             %small
