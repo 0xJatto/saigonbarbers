@@ -42,8 +42,7 @@
           - elsif current_page.data.bodyclass == "city"
             .details.back
               = link_to 'Back', '/'
-              %h1
-                Berlin
+              %h1= current_page.data.title
           - else
             %h1
               About us
@@ -60,26 +59,13 @@
                   %h3
                     Video tours of cafes in
                 %tbody
-                  %tr
-                    %td.city
-                      = link_to "Bangkok", "http://mysite.com"
-                    %td.cafecount
-                      = link_to "10", "http://mysite.com"
-                  %tr
-                    %td.city
-                      = link_to "Berlin", "http://mysite.com"
-                    %td.cafecount
-                      = link_to "10", "http://mysite.com"
-                  %tr
-                    %td.city
-                      = link_to "Budapest", "http://mysite.com"
-                    %td.cafecount
-                      = link_to "10", "http://mysite.com"
-                  %tr
-                    %td.city
-                      = link_to "Chiang Mai", "http://mysite.com"
-                    %td.cafecount
-                      = link_to "10", "http://mysite.com"
+                  - sitemap.resources.each do |page|
+                    - if page.data.bodyclass == "city"
+                      %tr
+                        %td.city
+                          =link_to page.data.title, page.url
+                        %td.cafecount
+                          = link_to page.data.cafes.length, page.url
                   %tr
                     %td.city
                       &nbsp;
@@ -92,141 +78,8 @@
                       = contribute_link
 
         - if current_page.data.bodyclass == "city"
-          .cafe.col1
-            .video
-              = image_tag "/images/temp/image-placeholder-the_barn.jpg"
-              - link_to 'http://instagram.com' do
-                .play-button
-            .details
-              .cafe-title
-                .name
-                  %h2
-                    = link_to 'The Barn', '/'
-                .forward
-                  = link_to 'Forward', '/'
-              .post-details
-                - link_to '/' do
-                  .avatar{:style => "background-image: url('/images/temp/avatar-ytspar.jpg');"}
-                    %small
-                      Avatar
-                .left
-                  .meta.username
-                    %small
-                      %b
-                        = link_to '@ytspar', 'http://instagram.com/ytspar'
-                  .meta.date
-                    %small
-                      = link_to '2d ago', 'http://instagram.com/ytspar'
-                .right
-                  .meta.likes
-                    %small
-                      = link_to '@12,349 likes', 'http://instagram.com/ytspar'
-                      
-                  .meta.comments
-                    %small
-                      = link_to '455 comments', 'http://instagram.com/ytspar'
+          = partial "partials/city"
 
-          .cafe.col2
-            .video
-              = image_tag "/images/temp/image-placeholder-silo.jpg"
-              - link_to 'http://instagram.com' do
-                .play-button
-                  %span
-                    Play video
-            .details
-              .cafe-title
-                .name
-                  %h2
-                    Silo Cafe a very long name so long that it stretches out the line and should expand to two lines
-                .forward
-                  = link_to 'Forward', '/'
-              .post-details
-                .avatar{:style => "background-image: url('/images/temp/avatar-nicoappel.jpg');"}
-                  %small
-                    Avatar
-                .left
-                  .meta.username
-                    %small
-                      @nicoappel
-                  .meta.date
-                    %small
-                      2d ago
-                .right
-                  .meta.likes
-                    %small
-                      12,349 likes
-                  .meta.comments
-                    %small
-                      455 comments
-
-          .cafe.col1
-            .video
-              = image_tag "/images/temp/image-placeholder-the_barn.jpg"
-              - link_to 'http://instagram.com' do
-                .play-button
-            .details
-              .cafe-title
-                .name
-                  %h2
-                    = link_to 'The Barn', '/'
-                .forward
-                  = link_to 'Forward', '/'
-              .post-details
-                - link_to '/' do
-                  .avatar{:style => "background-image: url('/images/temp/avatar-ytspar.jpg');"}
-                    %small
-                      Avatar
-                .left
-                  .meta.username
-                    %small
-                      %b
-                        = link_to '@ytspar', 'http://instagram.com/ytspar'
-                  .meta.date
-                    %small
-                      = link_to '2d ago', 'http://instagram.com/ytspar'
-                .right
-                  .meta.likes
-                    %small
-                      = link_to '@12,349 likes', 'http://instagram.com/ytspar'
-                      
-                  .meta.comments
-                    %small
-                      = link_to '455 comments', 'http://instagram.com/ytspar'
-
-          .cafe.col2
-            .video
-              = image_tag "/images/temp/image-placeholder-silo.jpg"
-              - link_to 'http://instagram.com' do
-                .play-button
-                  %span
-                    Play video
-            .details
-              .cafe-title
-                .name
-                  %h2
-                    Silo Cafe a very long name so long that it stretches out the line and should expand to two lines
-                .forward
-                  = link_to 'Forward', '/'
-              .post-details
-                .avatar{:style => "background-image: url('/images/temp/avatar-nicoappel.jpg');"}
-                  %small
-                    Avatar
-                .left
-                  .meta.username
-                    %small
-                      @nicoappel
-                  .meta.date
-                    %small
-                      2d ago
-                .right
-                  .meta.likes
-                    %small
-                      12,349 likes
-                  .meta.comments
-                    %small
-                      455 comments
-
-              = yield
         -else
           = yield
       

@@ -87,6 +87,7 @@ helpers do
     end
 
 end
+
 # Change the CSS directory
 # set :css_dir, "alternative_css_directory"
 

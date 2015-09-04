@@ -118,7 +118,7 @@ body.city
   width: 320px
   padding-top: 10px
   // Force images to scale down to their container widths.
-  img
+  img, video
     max-width: 100%
     height: auto
   background-color: $light-brown
@@ -156,7 +156,7 @@ body.home
         border-bottom: 2px solid $border
         padding: 0.4em 0
         &.city
-          width: 250px
+          width: 256px
           a
             color: $white
             +font
@@ -172,6 +172,8 @@ body.home
             color: $dark-brown
             text-align: center
             &:hover
+            float: right
+            margin-right: 3px
               color: $white
 
 .icon a
@@ -212,8 +214,7 @@ small
     width: 320px
     height: 320px
     border-top: 1px solid $white
-    border-bottom: 3px solid $dark
-    background-color: $dark
+    border-bottom: 1px solid $dark
     .play-button
       position: relative
       @include hide-text
@@ -263,9 +264,8 @@ small
         &:hover
           font-style: normal
           color: $white
-      .username a
-        +font(medium)
-        &:hover
+      .meta.username
+        a
           +font(medium)
       .avatar
         +hide-text
@@ -273,6 +273,7 @@ small
         @include transition(all 0.5s linear)
         height: 30px
         width: 30px
+        background-size: 30px
         display: block
         margin: 2px 6px 0 0
         float: left
@@ -383,9 +384,9 @@ body.content
 @media only screen and (min-width: 688px)
   .container, body.home .container, body.content .container, #footer footer
     width: 688px
-  .col1
+  .col1, .cafe:nth-child(odd)
     float: left
-  .col2
+  .col2, .cafe:nth-child(even)
     float: right
   header
     h1, h2
