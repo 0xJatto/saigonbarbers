@@ -65,7 +65,7 @@
                         %td.city
                           =link_to page.data.title, page.url
                         %td.cafecount
-                          = link_to page.data.cafes.length, page.url
+                          = link_to page.data.cafes.length.to_s.rjust(2, '0'), page.url
                   %tr
                     %td.city
                       &nbsp;
