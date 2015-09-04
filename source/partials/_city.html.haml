@@ -24,7 +24,10 @@
               = link_to "@#{cafe.user_name}", "http://instagram.com/#{cafe.user_name}"
           .meta.date
             %small
+              :javascript
+                moment("#{cafe.created_time}", "YYYYMMDD").fromNow();
               = link_to '2d ago', 'http://instagram.com/ytspar'
+
         .right
           .meta.likes
             %small
