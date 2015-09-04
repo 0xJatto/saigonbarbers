@@ -25,7 +25,17 @@
 
     = stylesheet_link_tag "screen"
     = javascript_include_tag "libs/modernizr-2.7.1.min"
-
+    = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"
+    :javascript
+      window.onload = function () {
+      var lala = document.getElementsByClassName('time-link');
+      for(var i = 0; i < lala.length; ++i) {
+          var ts = lala[i].getAttribute("data-time");
+          var aa = lala[i];
+          var fts = moment.unix(ts).fromNow();
+          aa.innerHTML = fts;
+          }
+        }
   %body{:class => current_page.data.bodyclass}
     .container
       .logo-wrapper
