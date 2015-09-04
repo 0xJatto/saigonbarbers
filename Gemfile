@@ -30,4 +30,6 @@ platforms :mswin, :mingw do
 end
 
 ### Build
+##group :build do
 gem "middleman-smusher"
+gem 'middleman-s3_sync'
