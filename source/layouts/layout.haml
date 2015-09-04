@@ -20,10 +20,12 @@
     -# maximum-scale = 1.0 ?
 
     -# Place favicon.ico and apple-touch-icon(s) in the root directory
-
     = partial "partials/icons"
 
+    = stylesheet_link_tag "//vjs.zencdn.net/4.12/video-js.css"
     = stylesheet_link_tag "screen"
+
+    = javascript_include_tag "//vjs.zencdn.net/4.12/video.js"
     = javascript_include_tag "libs/modernizr-2.7.1.min"
 
   %body{:class => current_page.data.bodyclass}
