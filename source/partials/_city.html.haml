@@ -6,8 +6,6 @@
     .video{ :class => "height#{cafe.video_height.to_i}"}
       %video.video-js.vjs-default-skin{:controls => "true", :loop => "true", height: "#{cafe.video_height.to_i / 2}", width: "#{cafe.video_width.to_i / 2}", :data => {:setup => "{}"},}
         %source{:src => "#{cafe.video}", :type => "video/mp4"}
-      //- link_to "#{cafe.video}" do
-      //  .play-button{:style => "margin-top: -#{cafe.video_height.to_i / 2 + 4}px;"}
     .details
       .cafe-title
         .name

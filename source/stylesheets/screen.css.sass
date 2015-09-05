@@ -12,7 +12,10 @@
 @import "h5bp"
 @import "bourbon/bourbon"
 @import "base/base"
+@import "base/mediaqueries"
 @import "type"
+
+@import "iphone"
 
 // /imports
 
@@ -60,7 +63,6 @@ h1, h2, h3, p, .city
 h1
   +font(bold)
   color: #999
-  line-height: 1em
   display: inline
   color: $white
   line-height: rem(21)
@@ -100,10 +102,10 @@ kbd
   box-shadow: inset 0 0 0 5px $dark
   &:hover
     box-shadow: none
-  width: 310px
+  width: 320px
   img
     margin: 0 auto
-    width: 283px
+    width: 293px
     display: block
 
 body.general, body.home, body.content
@@ -163,7 +165,6 @@ body.city
   text-shadow: none
   color: $white
 
-
 #main-content, .col
   width: 320px
 
@@ -175,8 +176,12 @@ header, .cities
   margin: 0 auto
 
 body.home
-  .cities, header
+  .cities, header, #footer footer
     width: 280px
+  .logo-wrapper
+    width: 310px
+    img
+      width: 283px
 
 .details
   width: 300px
@@ -242,6 +247,7 @@ small
     display: inline-block
     float: right
     margin: 0.4em 0
+    letter-spacing: -0.5px
 
 .cafe
   margin-bottom: 1em
@@ -252,6 +258,7 @@ small
     display: block
     border-top: 1px solid $white
     border-bottom: 1px solid $dark
+    cursor: pointer
   .details
     border-bottom: 2px solid $white
     margin-bottom: 30px
@@ -296,6 +303,7 @@ small
         height: 30px
         width: 30px
         background-size: 30px
+        background-repeat: none
         display: block
         margin: 2px 6px 0 0
         float: left
@@ -314,7 +322,7 @@ body.content
   .container
     width: 320px
   .header-wrapper, #main-content
-    width: 280px
+    width: 300px
     margin: 0 auto
   h1
     +font(medium)
@@ -336,7 +344,7 @@ body.content
   +sticky-footer(180px)
   height: 100%
   footer
-    width: 280px
+    width: 320px
     height: 220px
     margin: 0 auto
     &:before
@@ -403,7 +411,28 @@ body.content
   section, ul li
     line-height: rem(15)
 
-@media only screen and (min-width: 688px)
+@include iphone6(portrait)
+  @include iphone-dimensions(375px, 365px, 355px, 345px, 330px, 335px, 300px, 320px, 211px) 
+  .cafe .details .cafe-title .name
+    width: 330px
+
+@include iphone6-plus(portrait)
+  @include iphone-dimensions(414px, 400px, 385px, 375px, 365px, 360px, 320px, 365px, 233px)
+  .cafe .details .cafe-title .name
+    width: 360px
+
+@include max-screen(375px)
+  #footer footer
+    width: 280px
+
+@include max-screen(320px)
+  body .logo-wrapper
+    width: 310px
+    img
+      width: 283px
+
+// Everything bigger than an iPhone 6+
+@include min-screen(688px)
   .container, body.home .container, body.content .container, #footer footer
     width: 688px
   .col1, .cafe:nth-child(odd)
@@ -470,8 +499,6 @@ body.content
       @include transition(margin 0.2s linear)
       &:hover
         box-shadow: none
-        margin-top: -1px
-        margin-bottom: 11px  
     .header-wrapper
       float: right
     header
@@ -480,7 +507,7 @@ body.content
       width: 688px
       margin-top: 2em
     .back
-      margin: 1em auto 0
+      margin: 0.9em auto 0
     footer
       margin-top: 9em
   #footer footer
