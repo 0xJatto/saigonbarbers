@@ -115,7 +115,6 @@ body.city
   .logo-wrapper
     padding: 23px 0 11px 0
 
-
 .container
   width: 320px
   padding-top: 10px
@@ -155,6 +154,9 @@ body.city
 
 .video.height640 .vjs-big-play-button
   top: 52%
+
+.vjs-control-bar, .vjs-default-skin.vjs-has-started .vjs-control-bar
+  display: none
 
 .vjs-default-skin.vjs-has-started .vjs-control-bar
   .vjs-current-time.vjs-time-controls.vjs-control, .vjs-time-divider, .vjs-duration.vjs-time-controls.vjs-control, .vjs-remaining-time.vjs-time-controls.vjs-control, .vjs-live-controls.vjs-control, .vjs-progress-control.vjs-control, .vjs-mute-control.vjs-control, .vjs-volume-control.vjs-control
@@ -288,6 +290,8 @@ small
         line-height: rem(14)
       .meta
         overflow: hidden
+      .meta.date
+        letter-spacing: -0.25px
       a
         color: $dark-brown
         &:hover
