@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="11px" viewBox="0 0 23 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-right-small</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="City" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="City:-Mobile" sketch:type="MSArtboardGroup" transform="translate(-285.000000, -531.000000)" fill="#FFFFFF">
+            <g id="Video-1" sketch:type="MSLayerGroup" transform="translate(0.000000, 188.565580)">
+                <g id="Video-Details" transform="translate(12.000000, 336.000000)" sketch:type="MSShapeGroup">
+                    <g id="arrow-right-small" transform="translate(273.000000, 1.000000)">
+                        <path d="M3.49223861,18.6350435 C3.49223861,19.0421 3.8283555,19.3720846 4.2429767,19.3720846 L10.2488815,19.3720846 C10.6635027,19.3720846 10.9996196,19.0421 10.9996196,18.6350435 C10.9996196,18.227987 10.6635027,17.8980025 10.2488815,17.8980025 L4.2429767,17.8980025 L4.9937148,18.6350435 L4.9937148,12.7387151 C4.9937148,12.3316586 4.6575979,12.001674 4.2429767,12.001674 C3.8283555,12.001674 3.49223861,12.3316586 3.49223861,12.7387151 L3.49223861,18.6350435 Z M19.1444861,3.59210746 C18.8513046,3.298926 18.3763662,3.29852333 18.0867381,3.58815144 L6.11136195,15.5635276 C5.82036534,15.8545242 5.8200925,16.3260501 6.11531797,16.6212756 C6.40849944,16.914457 6.88343784,16.9148597 7.17306595,16.6252316 L19.1484421,4.64985543 C19.4394387,4.35885882 19.4397116,3.88733293 19.1444861,3.59210746 Z" id="Arrow-Right---Small" transform="translate(11.428672, 11.372085) rotate(-135.000000) translate(-11.428672, -11.372085) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

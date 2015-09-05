@@ -35,7 +35,7 @@
   @include hide-text
   width: 24px
   height: 24px
-  background: no-repeat 0 50% url("/images/icons/arrow-right-small.png") transparent
+  background: no-repeat 0 50% url("/images/icons/arrow-right-small.svg") transparent
   @include transition(margin-left 0.2s ease)
   &:hover
     margin-left: 2px
@@ -237,7 +237,7 @@ small
     display: inline-block
     width: 44px
     height: 45px
-    background: no-repeat 0 50% url("/images/icons/arrow-left-large.png") transparent
+    background: no-repeat 0 50% url("/images/icons/arrow-left-large.svg") transparent
     @include transition(margin-left 0.2s ease)
     &:hover
       margin-left: -2px
@@ -385,8 +385,11 @@ body.content
     .os-label
       width: 180px
     .github-link
-      img
-        margin-top: -3px
+      fill: red
+      svg
+        position: relative
+        top: 2px
+        fill: $dark
       width: 60px
       margin-left: 25px
   .email

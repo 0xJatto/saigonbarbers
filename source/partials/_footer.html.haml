@@ -29,7 +29,8 @@
           %li.github-link
             %small
               - link_to "http://github.com/ytspar" do
-                = image_tag "/images/icons/github.png", :alt => "Github"
+                %svg{:height => "14", :width => "14", :xmlns => "http://www.w3.org/2000/svg", :viewbox => "0 0 14 14"}
+                  %image{:height => "14", :width => "14", "xlink:href" => "/images/icons/mark-github.svg"}
                 Github
     .col2
       %section.contact

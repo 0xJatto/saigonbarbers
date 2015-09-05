@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="43px" height="19px" viewBox="0 0 43 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-left-large</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="City" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="City:-Mobile" sketch:type="MSArtboardGroup" transform="translate(-12.000000, -101.000000)" fill="#2F2919">
+            <g id="Header" sketch:type="MSLayerGroup" transform="translate(12.000000, 88.000000)">
+                <g id="arrow-left-large" sketch:type="MSShapeGroup">
+                    <path d="M6.29815021,36.3005372 C6.29815021,37.0744608 6.9371985,37.7018498 7.72550452,37.7018498 L19.144339,37.7018498 C19.932645,37.7018498 20.5716933,37.0744608 20.5716933,36.3005372 C20.5716933,35.5266137 19.932645,34.8992247 19.144339,34.8992247 L7.72550452,34.8992247 L9.15285883,36.3005372 L9.15285883,25.0900367 C9.15285883,24.3161132 8.51381054,23.6887242 7.72550452,23.6887242 C6.9371985,23.6887242 6.29815021,24.3161132 6.29815021,25.0900367 L6.29815021,36.3005372 Z M36.0572674,7.69988437 C35.4998509,7.14246783 34.5968657,7.14170225 34.0384676,7.70010039 L11.2855431,30.4530249 C10.7280072,31.0105607 10.7240243,31.910522 11.2853271,32.4718247 C11.8427436,33.0292413 12.7457288,33.0300069 13.3041269,32.4716087 L36.0570514,9.71868421 C36.6145872,9.16114838 36.6185702,8.2611871 36.0572674,7.69988437 Z" id="Back-Arrow" transform="translate(21.503230, 22.496770) scale(-1, 1) rotate(-135.000000) translate(-21.503230, -22.496770) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
