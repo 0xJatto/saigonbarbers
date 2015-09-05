@@ -1,6 +1,3 @@
-# Uses .env in the root of the project
-activate :dotenv
-
 ###
 # Compass
 ###
@@ -14,6 +11,8 @@ require 'susy'
 # end
 
 activate :livereload
+
+activate :directory_indexes
 
 ###
 # Haml
@@ -135,6 +134,7 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+
 end
 
 # Requires middleman-deploy and rsync
@@ -149,25 +149,31 @@ end
 #   deploy.build_before = true # default: false
 # end
 
-activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = 'ristrettogram.com' # The name of the S3 bucket you are targetting. This is globally unique.
-  s3_sync.region                     = 'us-west-1'     # The AWS region for your bucket.
-
-  s3_sync.delete                     = false # We delete stray files by default.
-  s3_sync.after_build                = false # We do not chain after the build step by default.
-  s3_sync.prefer_gzip                = true
-  s3_sync.path_style                 = true
-  s3_sync.reduced_redundancy_storage = false
-  s3_sync.acl                        = 'public-read'
-  s3_sync.encryption                 = false
-  s3_sync.prefix                     = ''
-  s3_sync.version_bucket             = false
-end
-
 configure :development do
-  activate :dotenv, env: '.env.development'
   set :debug_assets, true
 end
+
+# Load a YML config file with constants. A aws.yml.example file is provided.
+ignore 'aws.yml'
+aws_config = YAML::load(File.open('aws.yml'))
+
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                = aws_config['s3_bucket']
+  s3_sync.region                = aws_config['aws_region']
+  s3_sync.aws_access_key_id     = aws_config['access_key_id']
+  s3_sync.aws_secret_access_key = aws_config['secret_access_key']
+  s3_sync.delete                = true
+  s3_sync.after_build           = false
+end
+
+activate :cloudfront do |cf|
+  cf.access_key_id              = aws_config['access_key_id']
+  cf.secret_access_key          = aws_config['secret_access_key']
+  cf.distribution_id            = aws_config['cloud_front_dist_id']
+  cf.filter                     = /(.html|.xml)/
+  cf.after_build                = false
+end
+
 
 # Skip locale validation (and validation warnings)
 I18n.enforce_available_locales = false

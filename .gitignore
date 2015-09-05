@@ -5,4 +5,5 @@ bin/
 tmp/
 .bundle/
 .s3_sync
+aws.yml
 .env*
