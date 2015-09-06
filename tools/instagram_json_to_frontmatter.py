@@ -94,7 +94,7 @@ def get_posts(keyword, max_id=None, min_id=None):
 
         if post['location']:
             result['latitude'] = post['location']['latitude']
-            result['ongitude'] = post['location']['longitude']
+            result['longitude'] = post['location']['longitude']
             result['cafe_name_ig'] = post['location']['name']
         results.append(result)
     return results
