@@ -30,9 +30,7 @@ platforms :mswin, :mingw do
 end
 
 ### Build
-##group :build do
 gem "middleman-smusher"
 gem "middleman-s3_sync"
 gem "middleman-minify-html"
-
-gem 'middleman-dotenv', '~> 1.0'
+gem "middleman-cloudfront"
