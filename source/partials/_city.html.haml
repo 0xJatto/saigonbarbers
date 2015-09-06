@@ -3,9 +3,9 @@
 
 - current_page.data.cafes.each do |cafe|
   .cafe
-    .video{ :class => "height#{cafe.video_height.to_i}"}
-      %video.video-js.vjs-default-skin{:controls => true, :loop => true, height: "#{cafe.video_height.to_i / 2}", width: "#{cafe.video_width.to_i / 2}", :preload => "none", :poster => "https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11848996_828880553876780_2119804062_n.jpg", :data => {:setup => "{}"},}
-        %source{:src => "#{cafe.video}", :type => "video/mp4"}
+    .video{ :class => "height#{cafe.height.to_i}"}
+      %video.video-js.vjs-default-skin{:controls => true, :loop => true, height: "#{cafe.height.to_i / 2}", width: "#{cafe.width.to_i / 2}", :preload => "none", :poster => "#{cafe.cover_image}", :data => {:setup => "{}"},}
+        %source{:src => "#{cafe.video_url_low}", :type => "video/mp4"}
     .details
       .cafe-title
         .name
