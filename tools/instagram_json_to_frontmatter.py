@@ -24,7 +24,6 @@ FM_TEMPLATE = """\
 ---
 """
 
-
 def u(text, encoding='utf-8'):
     "Return unicode text, no matter what"
 
@@ -48,6 +47,23 @@ def dumps(post, **kwargs):
 
 
 def get_posts(keyword, max_id=None, min_id=None):
+    """
+    returns frontmatter-ish data for the city files.
+
+    link_shortcode:
+    cafe_name:
+    width:
+    height:
+    cover_image:
+    video_url_high:
+    video_url_low:
+    user_name:
+    user_image:
+    created_time:
+    latitude:
+    longitude:
+    cafe_name_ig:
+    """
     url = 'https://api.instagram.com/v1/tags/%s/media/recent/' % keyword
     url += '?client_id=%s' % CLIENT_ID
     if max_id:
@@ -57,25 +73,29 @@ def get_posts(keyword, max_id=None, min_id=None):
     djson = json.loads(requests.get(url).content)
     results = []
     for post in djson['data']:
+        latitude = ''
+        longitude = ''
+        cafe_name_ig = ''
         result = {
             # 'id' : post['id'],
             'cafe_name': 'ADD CAFE NAME',
             'user_name': post['user']['username'],
             'user_image': post['user']['profile_picture'],
-            'likes': post['likes']['count'],
-            'comments': post['comments']['count'],
-            # https://instagram.com/developer/endpoints/media/#get_media_by_shortcode
+            'cover_image': post['images']['standard_resolution']['url'],
             'link_shortcode': post['link'].split('/')[-2],
-            'link': post['link'],
             'created_time': post['created_time'],
         }
 
         if post['type'] == 'video' and 'videos' in post:
-            result['video'] = post['videos']['standard_resolution']['url']
-            result['video_width'] = post['videos'][
-                'standard_resolution']['width']
-            result['video_height'] = post['videos'][
-                'standard_resolution']['height']
+            result['video_url_low'] = post['videos']['low_resolution']['url']
+            result['video_url_high'] = post['videos']['standard_resolution']['url']
+            result['width'] = post['videos'][ 'standard_resolution']['width']
+            result['height'] = post['videos'][ 'standard_resolution']['height']
+
+        if post['location']:
+            result['latitude'] = post['location']['latitude']
+            result['ongitude'] = post['location']['longitude']
+            result['cafe_name_ig'] = post['location']['name']
         results.append(result)
     return results
 
