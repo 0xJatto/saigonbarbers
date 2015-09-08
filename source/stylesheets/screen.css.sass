@@ -97,13 +97,16 @@ h2
 
 h3
   +font(bold)
-  letter-spacing: -1px
+  letter-spacing: -0.75px
   margin: 0
+  span
+    overflow: hidden
+
+body.home h3
+  letter-spacing: -1px
   // Dash next to title
   display: table
   white-space: nowrap
-  span
-    overflow: hidden
   &:before
     border-top: 3px solid $dark
     content: '&mdash;'
@@ -298,7 +301,7 @@ small
       .name
         display: inline-block
         float: left
-      h2
+      h3
         +font(medium)
         font-size: rem(18)
         line-height: rem(20)
@@ -308,6 +311,9 @@ small
         float: right
         a
           @extend .arrow-right-icon
+          background-size: 105%
+          width: 28px
+          background-position-y: 34%
     .post-details
       float: left
       display: block
@@ -376,7 +382,7 @@ body.content
   +sticky-footer(180px)
   height: 100%
   footer
-    width: 320px
+    width: 75%
     height: 200px
     margin: 0 auto
     &:before
@@ -417,9 +423,6 @@ body.content
     .os-label
       width: 180px
     .github-link
-      background-color: red
-      mask-image: url(/images/icons/mark-github-brown.svg)
-      -webkit-mask-image: url(images/icons/mark-github-brown.svg)
       svg
         position: relative
         top: 2px
