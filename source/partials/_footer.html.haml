@@ -2,29 +2,28 @@
   %footer
     .col1
       %section.creators
-        %p
-          %small
-            %em
-              &copy; #{DateTime.now.strftime("%Y")}
+        .copyright
+          %h4
+            &copy; #{DateTime.now.strftime("%Y")}
         %ul
           %li.name
-            %small Yury
+            %h4 Yury
           %li.twitter
             %small= link_to "@ytspar", "http://twitter.com/ytspar"
         %ul
           %li.name
-            %small Alexej
+            %h4 Alexej
           %li.twitter
             %small= link_to "@heyalexej", "http://twitter.com/heyalexej"
         %ul
           %li.name
-            %small Nico
+            %h4 Nico
           %li.twitter 
             %small= link_to "@nicoappel", "https://twitter.com/nicoappel"
       %section.bottom.open-source
         %ul
           %li.os-label
-            %small
+            %h4
               This project is Open Source
           %li.github-link
             %small
@@ -36,11 +35,11 @@
       %section.contact
         %ul
           %li.link
-            %small
+            %h4
               = link_to "@ristrettogram", "http://twitter.com/ytspar"
         %ul.email
           %li.link
-            %small
+            %h4
               = mail_to "ytspar+ristrettogram@gmail.com", "Send us an email"
       %nav.bottom
         %ul
