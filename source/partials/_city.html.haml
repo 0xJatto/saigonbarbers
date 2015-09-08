@@ -10,10 +10,10 @@
       .cafe-title
         .name
           %h2
-            = link_to "#{cafe.cafe_name}", "#{cafe.link}"
+            = link_to "#{cafe.cafe_name}", "https://instagram.com/p/#{cafe.link_shortcode}/"
         .forward
-          = link_to "#{cafe.cafe_name}", "#{cafe.link}"
-      .post-details
+          = link_to "#{cafe.cafe_name}", "https://instagram.com/p/#{cafe.link_shortcode}/"
+      .post-details{:data => {:igid => cafe.link_shortcode}}
         - link_to '/' do
           .avatar{:style => "background-image: url(#{cafe.user_image});"}
             %small= cafe.user_name
@@ -28,8 +28,8 @@
         .right
           .meta.likes
             %small
-              //= link_to pluralize(cafe.likes, 'like'), cafe.link
-              
+              = link_to pluralize(cafe.likes, 'like'), "https://instagram.com/p/#{cafe.link_shortcode}/"
+
           .meta.comments
             %small
-              //= link_to pluralize(cafe.comments, 'comment'), cafe.link
+              = link_to pluralize(cafe.comments, 'comment'), "https://instagram.com/p/#{cafe.link_shortcode}/"
