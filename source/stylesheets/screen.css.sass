@@ -40,6 +40,9 @@
   &:hover
     margin-left: 2px
 
+.touch
+  -webkit-overflow-scrolling: touch
+
 p
   +font(medium)
 
@@ -125,6 +128,8 @@ body.city
   background-color: $light-brown
   margin: 0 auto 15px
   +min-height(800px)
+  overflow-y: scroll
+  @extend .touch
 
 .vjs-default-skin
   .vjs-big-play-button
