@@ -1,6 +1,10 @@
 -# you can access all the cafe elements from the yaml frontmatter in the
 -# respective city haml files.
 
+.screen-reader{:aria => { :hidden => "false"}}
+  %h2
+    List of cafes
+
 - current_page.data.cafes.each do |cafe|
   .cafe
     .video{ :class => "height#{cafe.height.to_i}"}
