@@ -31,17 +31,31 @@
 // Font Awesome icons
 // @import "font-awesome"
 
+// to @extend
+
 .arrow-right-icon
   @include hide-text
   width: 24px
   height: 24px
   background: no-repeat 0 50% url("/images/icons/arrow-right-small.svg") transparent
   @include transition(margin-left 0.2s ease)
+  display: block
+  float: right
   &:hover
-    margin-left: 2px
+    margin-right: -2px
+    margin-left: -2px
 
 .touch
   -webkit-overflow-scrolling: touch
+
+// Can use within media queries following
+// http://www.sitepoint.com/cross-media-query-extend-sass/
+.large-icon
+  background-size: 125%
+  background-position-x: -8px
+  width: 28px
+
+// 
 
 p
   +font(medium)
@@ -56,7 +70,7 @@ body
   +min-height(100%)
 
 a
-  +link-colors($white, $dark)
+  +link-colors($white, $dark, $dark-brown, $white, $dark-brown)
   @include transition(color 0.2s linear)
 
 
@@ -179,25 +193,27 @@ video
   object-fit: cover
 
 #main-content, .col
-  width: 320px
+  width: 1005
 
 .header-wrapper
-  width: 320px
+  width: 100%
   margin-top: 12px
 
 header, .cities
   margin: 0 auto
 
 body.home
-  .cities, header, #footer footer
-    width: 280px
+  .cities, header
+    width: 90%
+  #footer footer
+    width: 70%
   .logo-wrapper
     width: 310px
     img
       width: 283px
 
 .details
-  width: 300px
+  width: 320px
   margin: 10px auto 0
 
 .cities
@@ -212,17 +228,17 @@ body.home
       td
         border-bottom: 2px solid $border
         padding: 0.4em 0
-        &.city
-          width: 256px
-          a
-            color: $white
-            +font
-            &:hover
-              color: $dark-brown
+        a
+          color: $white
+          +font
+          &:hover
+            color: $dark-brown
         &.icon
           a
             @extend .arrow-right-icon
-            display: block
+        &.contribute a
+          float: left
+          width: 300px
         &.cafecount
           padding: 0.5em 0 0.2em
           a
@@ -279,7 +295,7 @@ small
       overflow: auto
       .name
         display: inline-block
-        width: 274px
+        width: 294px
         float: left
       h2
         +font(medium)
@@ -318,7 +334,7 @@ small
         height: 30px
         width: 30px
         background-size: 30px
-        background-repeat: none
+        background-repeat: no-repeat
         display: block
         margin: 2px 6px 0 0
         float: left
@@ -428,14 +444,14 @@ body.content
     line-height: rem(15)
 
 @include iphone6(portrait)
-  @include iphone-dimensions(375px, 365px, 355px, 345px, 330px, 335px, 300px, 320px, 211px) 
-  .cafe .details .cafe-title .name
-    width: 330px
+  @include iphone-dimensions(375px, 365px, 211px) 
 
 @include iphone6-plus(portrait)
-  @include iphone-dimensions(414px, 400px, 385px, 375px, 365px, 360px, 335px, 365px, 233px)
-  .cafe .details .cafe-title .name
-    width: 360px
+  @include iphone-dimensions(414px, 400px, 233px)
+  .cities table tr td.icon a
+    background-size: 125%
+    background-position-x: -8px
+    width: 28px
 
 @include max-screen(375px)
   #footer footer
@@ -490,10 +506,12 @@ body.content
     table tr
       td.city, td.cafecount, td.contribute
         font-size: rem(24)
-      td.city
-        width: 95%
       td
         padding: 0.5em 0
+      .icon a
+        background-size: 125%
+        background-position-x: -8px
+        width: 28px
     #footer footer
       .col1
         width: 280px
@@ -515,6 +533,8 @@ body.content
       @include transition(margin 0.2s linear)
       &:hover
         box-shadow: none
+    .details.back
+      float: left
     .header-wrapper
       float: right
     header
@@ -523,7 +543,7 @@ body.content
       width: 688px
       margin-top: 2em
     .back
-      margin: 0.9em auto 0
+      margin: -54px auto 0 367px
     footer
       margin-top: 9em
   #footer footer

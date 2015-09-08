@@ -1,13 +1,17 @@
-@mixin iphone-dimensions($w1, $w2, $w3, $w4, $w5, $header-width, $city-width, $cities-width, $wide-video-height)
+@mixin iphone-dimensions($w1, $w2, $wide-video-height)
   body.home, body.content, body.city
     .container, .header-wrapper, .cafe
       width: $w1
     .logo-wrapper
       width: $w2
       img
-        width: $w5
-    .details, #main-content
-      width: $w3
+        width: 92%
+    .details
+      width: $w2
+    .details.back
+      width: 94%
+    #main-content
+      width: $w1
     .video.height360 .video-js
       width: $w1 !important
       height: $wide-video-height !important
@@ -15,17 +19,17 @@
       width: $w1 !important
       height: $w1 !important
     #footer footer
-      width: $w4
+      width: 95%
   body.home, body.content
     #main-content
       margin: 0 auto
     header, #main-content .col
-      width: $w5
+      width: 100%
   body.home
     .header-wrapper
       margin-top: 0.7em
       header
-        width: $header-width
+        width: 90%
     h1, h2
       font-size: rem(21)
       display: block
@@ -34,25 +38,22 @@
     h2
       line-height: rem(24)
       margin-bottom: 0.5em
-    #main-content .col
-      width: $w3
     .cities
       margin-top: 0
-      width: $w5
+      width: 90%
       h3
         font-size: rem(21)
       table td
         font-size: rem(22)
         line-height: rem(25)
         &.city
-          width: $city-width
     #footer footer
-      width: $w5
+      width: 90%
   body.content
     .header-wrapper header, #main-content
-      width: $w4
+      width: 88%
   body.city
     .logo-wrapper
       padding: 26px 0 12px 0
     .cities
-      width: $cities-width
+      width: 90%
