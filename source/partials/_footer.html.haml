@@ -1,9 +1,13 @@
 #footer
+  %h2.screen-reader{:aria => { :hidden => "false"}}
+    Footer - copyright and contact information
   %footer
     .col1
       %section.creators
         .copyright
-          %h4
+          %h3.screen-reader{:aria => { :hidden => "false"}}
+            Copyright
+          %p
             &copy; #{DateTime.now.strftime("%Y")}
         %ul
           %li.name
@@ -23,7 +27,7 @@
       %section.bottom.open-source
         %ul
           %li.os-label
-            %h4
+            %small
               This project is Open Source
           %li.github-link
             %small
@@ -35,12 +39,10 @@
       %section.contact
         %ul
           %li.link
-            %h4
-              = link_to "@ristrettogram", "http://twitter.com/ytspar"
+            = link_to "@ristrettogram", "http://twitter.com/ytspar"
         %ul.email
           %li.link
-            %h4
-              = mail_to "ytspar+ristrettogram@gmail.com", "Send us an email"
+            = mail_to "ytspar+ristrettogram@gmail.com", "Send us an email"
       %nav.bottom
         %ul
           %li.about-link

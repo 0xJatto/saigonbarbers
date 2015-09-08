@@ -61,7 +61,16 @@
   visibility: hidden
 
 .screen-reader
-  display: none
+  // Hide text from non-screen readers
+  // http://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/
+  position: absolute
+  clip: rect(1px 1px 1px 1px) // for Internet Explorer
+  clip: rect(1px, 1px, 1px, 1px)
+  padding: 0
+  border: 0
+  height: 1px
+  width: 1px
+  overflow: hidden
 
 p
   +font(medium)
@@ -119,7 +128,7 @@ body.home h3
     position: relative
     top: 0.75em
 
-h4
+h4, footer p, footer li
   +font
   color: $dark-brown
   display: inline
@@ -393,7 +402,7 @@ body.content
   height: 100%
   footer
     width: 75%
-    height: 200px
+    height: 182px
     margin: 0 auto
     &:before
       height: 3px
@@ -420,12 +429,14 @@ body.content
     margin-top: 0
     margin-bottom: 0
     float: left
+    li
+      display: block
     &:last-child
       margin-right: 0
   .creators
     p
       float: left
-      margin: 0 1em 0 0
+      margin: 0 0.8em 0 0
     .copyright
       float: left
       margin-right: 20px
@@ -436,6 +447,7 @@ body.content
     .os-label
       width: 180px
     .github-link
+      margin-top: -0.1em
       svg
         position: relative
         top: 2px
@@ -445,10 +457,6 @@ body.content
       @include transition(all 0.6s linear)
       &:hover
         @include filter(brightness(0) invert(1))
-  .email
-    margin-left: 10px
-    img
-      margin-top: -3px
   nav
     ul li
       float: left
@@ -574,18 +582,19 @@ body.content
     footer
       margin-top: 9em
   #footer footer
-    height: 155px
+    height: 140px
     margin-top: 6em
     .col1, .col2
       width: 320px
     section.open-source
       border-bottom: 0px
     section.contact
-      padding-top: 0.9em
+      padding-top: 0.7em
     section
       padding-bottom: 0.9em
     .bottom
-      padding-top: 0.3em
+      padding-top: 0.2em
+      padding-bottom: 0
       float: left
 
 
