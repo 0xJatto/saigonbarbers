@@ -240,7 +240,7 @@ body.home
 small
   font-size: rem(12)
   line-height: rem(15)
-  color: $dark
+  color: $dark-brown
 
 .back
   border-bottom: 3px solid $white
@@ -354,7 +354,7 @@ body.content
   @include clearfix
 
 #footer
-  color: $dark
+  color: $dark-brown
   background-color: $light-brown
   +sticky-footer(180px)
   height: 100%
@@ -364,19 +364,19 @@ body.content
     margin: 0 auto
     &:before
       height: 3px
-      background: $dark //#423400
+      background: $dark-brown //#423400
       width: 60px
       display: block
       content: ""
       margin: 0 0 1.5em 0
   a
-    +link-colors($dark, $dark-brown)
+    +link-colors($dark-brown, $white)
     +font(medium)
     &:hover
       font-style: normal
   section
     margin-bottom: 0.5em
-    border-bottom: 1px solid $dark
+    border-bottom: 1px solid $dark-brown
     display: block
     float: left
     width: 100%
@@ -400,7 +400,6 @@ body.content
     .os-label
       width: 180px
     .github-link
-      fill: red
       svg
         position: relative
         top: 2px
