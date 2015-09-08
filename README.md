@@ -24,10 +24,8 @@ Find the specs on Zeplin: [bit.ly/rgzeplin](http://bit.ly/rgzeplin)
 - [Moment.js](http://momentjs.com) - for "time ago" timestamps
 - [Uptime Robot](https://uptimerobot.com) - for monnitoring the site; basic HTTP ping.
 
-### Markup
+### Markup, styling
 - [Haml](http://haml-lang.com/)
-
-### CSS
 - [Sass](http://sass-lang.com/)
 - [Compass](http://compass-style.org/)
 - [Bourbon](http://bourbon.io) and [Neat](http://neat.bourbon.io) for typography
@@ -116,37 +114,9 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 
 ### To do
 
-Moved to [Issues](https://github.com/ytspar/ristrettogram/issues?q=is%3Aopen+is%3Aissue)
+Moved to [Issues](https://github.com/ytspar/ristrettogram/issues?q=is%3Aopen+is%3Aissue).
 
-**Planned**
-
-- Bower/Gulp process to replace locked in place HTML5 boilerplate and so on
-- Add Google Analytics, heatmap etc (Segment?)
-
-*Views*
-
-- Populate city views from YAML files
-- Instagram API for city views
--  (later!)
-- Content for About section
-- Link sections together
-- Check header flow
-
-*Testing*
-
-- Test on retina (need 2x, 3x, whatever? SVG?)
-- Test on multiple browsers and devices (Mac, Windows, iOS, Android)
-
-
-**Maybe?**
-
-- Make slightly fluid columns? that is, make the main container, say 87.5% width, max width like 375 or iPhone 6 dimensions
-- Buy short domain?
-- README: change the header image to one in the repo? (`![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title"`)
-- Make icons into SVG?
-- Press kit with high res assets
-- Localization
-
+And [a list of possible, nice-to-have features](https://github.com/ytspar/ristrettogram/wiki/Possible-features).
 
 
 ## License
@@ -172,7 +142,10 @@ On the road between Berlin, Bangkok, Chiang Mai and Pai, among other places.
 **Built using**
 
 - [Sketch](http://www.bohemiancoding.com/sketch/) - design
+- [Zeplin](http://zeplin.io) - design specs
 - [Sublime](http://www.sublimetext.com) - code
-- [Icongen](http://iconogen.com/) - favicons
+- [Vim](http://www.vim.org) - code, self-loathing
+- [Icongen](http://iconogen.com/) - favicons (will be replaced by automated tool)
 - [SassToCSS](http://www.sasstoscss.com) - GUI for converting CSS to SASS; quicker than CLI sometimes
+- [HTMLtoHAML](http://htmltohaml.com) - same idea as above
 
