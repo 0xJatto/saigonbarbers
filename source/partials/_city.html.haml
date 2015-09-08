@@ -23,13 +23,14 @@
               = link_to "@#{cafe.user_name}", "http://instagram.com/#{cafe.user_name}"
           .meta.date
             %small
-              = link_to '', 'http://instagram.com/ytspar', :class => 'time-link', :data => {:time => cafe.created_time}
+              
 
         .right
           .meta.likes
             %small
               //= link_to pluralize(cafe.likes, 'like'), "https://instagram.com/p/#{cafe.link_shortcode}/"
-
-          .meta.comments
+          //.meta.comments
+          .meta.date
             %small
               //= link_to pluralize(cafe.comments, 'comment'), "https://instagram.com/p/#{cafe.link_shortcode}/"
+              = link_to '', 'http://instagram.com/ytspar', :class => 'time-link', :data => {:time => cafe.created_time}
