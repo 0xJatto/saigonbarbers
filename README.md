@@ -1,6 +1,8 @@
 ![ristrettogram](https://dl.dropboxusercontent.com/u/225019/ristrettogram-logo.png)
 
-# ristrettogram
+# [@ristrettogram](http://twitter.com/ristrettogram)
+
+
 
 ## What 
 Short video clips ([hyperlapse](https://hyperlapse.instagram.com) or timelapse) of third wave coffee shops, pulled from [Instagram](http://instagram.com/ytspar).
@@ -16,6 +18,11 @@ Find the specs on Zeplin: [bit.ly/rgzeplin](http://bit.ly/rgzeplin)
 - [Livereload](https://middlemanapp.com/basics/development_cycle/) is enabled by default
 - [middleman-s3_sync](https://github.com/fredjean/middleman-s3_sync) - for deploying to S3
 - [middleman-minify-html](https://github.com/middleman/middleman-minify-html) - for minifying HTML
+- [middleman-bower](https://github.com/polleverywhere/middleman_bower) - use the bower package manager
+- [Sass mediaqueries](http://github.com/paranoida/sass-mediaqueries) - for adding human readable breakpoints
+- [VideoJS](http://www.videojs.com) - HTML5 video player 
+- [Moment.js](http://momentjs.com) - for "time ago" timestamps
+- [Uptime Robot](https://uptimerobot.com) - for monnitoring the site; basic HTTP ping.
 
 ### Markup
 - [Haml](http://haml-lang.com/)
@@ -29,7 +36,6 @@ Find the specs on Zeplin: [bit.ly/rgzeplin](http://bit.ly/rgzeplin)
 
 ## How do I use it?
 
-*(from the Amicus docs)*
 
 Start by installing [Bundler](http://gembundler.com/), if you don't already have it:
 
@@ -45,13 +51,15 @@ git clone git@github.com:ytspar/ristrettogram.git however_you_want_to_name_your_
 
 Finally, do a ```bundle install``` to install the required gems -- even Middleman itself.
 
+Add an `aws.yml` file to your root (see [Deployment](https://github.com/ytspar/ristrettogram/wiki/Deployment) in the wiki for details).
+
 Use ```middleman``` to do your live development and ```middleman build``` to render your static file output to the ```/build/``` directory.
 
 Use ```middleman server``` to build dynamically on development.
 
 **Deploy on S3**
 
-`[PENDING]`
+See [Deployment](https://github.com/ytspar/ristrettogram/wiki/Deployment) in the wiki.
 
 For full Middleman documentation, visit the [Middleman website](http://middlemanapp.com/).
 
@@ -107,12 +115,11 @@ An included Ruby helper method to generate image placeholders, powered by [Holde
 Send a [message on Github](https://github.com/ytspar) or submit an [issue](https://github.com/ytspar/ristrettogram/issues), or [via Twitter, @ristrettogram](http://twitter.com/ristrettogram).
 
 ### To do
-**In no particular order,**
+
+Moved to [Issues](https://github.com/ytspar/ristrettogram/issues?q=is%3Aopen+is%3Aissue)
 
 **Planned**
 
-- Compress/minify CSS, Javascript
-- Production deploy to S3, Route53 config
 - Bower/Gulp process to replace locked in place HTML5 boilerplate and so on
 - Add Google Analytics, heatmap etc (Segment?)
 
@@ -120,7 +127,7 @@ Send a [message on Github](https://github.com/ytspar) or submit an [issue](https
 
 - Populate city views from YAML files
 - Instagram API for city views
-- Contribute form (later!)
+-  (later!)
 - Content for About section
 - Link sections together
 - Check header flow
