@@ -42,7 +42,7 @@
   display: block
   float: right
   &:hover
-    margin-right: -2px
+    margin-right: 2px
     margin-left: -2px
 
 .touch
@@ -56,6 +56,9 @@
   width: 28px
 
 // 
+
+.tablet
+  visibility: hidden
 
 p
   +font(medium)
@@ -117,12 +120,13 @@ kbd
 .logo-wrapper
   margin: 0 auto 0
   box-shadow: inset 0 0 0 5px $dark
+  width: 92%
   &:hover
     box-shadow: none
   width: 320px
   img
     margin: 0 auto
-    width: 293px
+    width: 92%
     display: block
 
 body.general, body.home, body.content
@@ -201,19 +205,9 @@ video
 
 header, .cities
   margin: 0 auto
-
-body.home
-  .cities, header
-    width: 90%
-  #footer footer
-    width: 70%
-  .logo-wrapper
-    width: 310px
-    img
-      width: 283px
-
+  
 .details
-  width: 300px
+  width: 310px
   margin: 10px auto 0
 
 .cities
@@ -416,6 +410,9 @@ body.content
     .os-label
       width: 180px
     .github-link
+      background-color: red
+      mask-image: url(/images/icons/mark-github-brown.svg)
+      -webkit-mask-image: url(images/icons/mark-github-brown.svg)
       svg
         position: relative
         top: 2px
@@ -464,9 +461,13 @@ body.content
       width: 283px
 
 // Everything bigger than an iPhone 6+
-@include min-screen(688px)
+@include min-screen(730px)
+  .tablet
+    visibility: visible
   .container, body.home .container, body.content .container, #footer footer, body.home #footer footer
     width: 688px
+  .container
+    padding-top: 0.8em
   .col1, .cafe:nth-child(odd)
     float: left
   .col2, .cafe:nth-child(even)
