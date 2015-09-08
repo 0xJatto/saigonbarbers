@@ -46,6 +46,7 @@
     margin-left: -2px
 
 .touch
+  overflow-y: scroll
   -webkit-overflow-scrolling: touch
 
 // Can use within media queries following
@@ -168,6 +169,7 @@ body.home
 .container
   width: 320px
   padding-top: 10px
+  // For logo animations
   // Force images to scale down to their container widths.
   img, video
     max-width: 100%
@@ -175,7 +177,8 @@ body.home
   background-color: $light-brown
   margin: 0 auto 15px
   +min-height(800px)
-  overflow-y: scroll
+
+#main-content
   @extend .touch
 
 .vjs-default-skin
