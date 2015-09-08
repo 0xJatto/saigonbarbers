@@ -10,6 +10,8 @@ require 'susy'
 #   config.output_style = :compact
 # end
 
+activate :bower
+
 activate :livereload
 
 activate :directory_indexes
