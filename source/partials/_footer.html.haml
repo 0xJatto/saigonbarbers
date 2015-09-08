@@ -27,7 +27,7 @@
       %section.bottom.open-source
         %ul
           %li.os-label
-            %small
+            %h3
               This project is Open Source
           %li.github-link
             %small
@@ -37,6 +37,8 @@
                 Github
     .col2
       %section.contact
+        %h3.screen-reader{:aria => { :hidden => "false"}}
+          Contact us
         %ul
           %li.link
             = link_to "@ristrettogram", "http://twitter.com/ytspar"
