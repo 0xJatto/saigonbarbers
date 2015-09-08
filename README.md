@@ -1,9 +1,5 @@
 ![ristrettogram](https://github.com/ytspar/ristrettogram/blob/master/source/docs/images/logo-heading-general.png)
 
-# ristrettogram
-
-
-
 ## What 
 Short video clips ([hyperlapse](https://hyperlapse.instagram.com) or timelapse) of third wave coffee shops, pulled from [Instagram](http://instagram.com/ytspar).
 
