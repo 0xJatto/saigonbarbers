@@ -102,6 +102,8 @@ h3
   // Dash next to title
   display: table
   white-space: nowrap
+  span
+    overflow: hidden
   &:before
     border-top: 3px solid $dark
     content: '&mdash;'
@@ -135,6 +137,9 @@ body.general, body.home, body.content
 body.city
   .logo-wrapper
     padding: 23px 0 11px 0
+body.home
+  header, .cities
+    width: 90%
 
 .container
   width: 320px
@@ -217,6 +222,8 @@ header, .cities
     caption
       text-align: left
       margin-bottom: 0.3em
+    caption
+      float: left
     tr
       margin-bottom: 0.25em
       td
