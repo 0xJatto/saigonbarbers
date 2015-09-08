@@ -1,4 +1,4 @@
-![ristrettogram](https://github.com/ytspar/ristrettogram/blob/master/source/docs/images/logo-heading-general@0.5x.png)
+![ristrettogram](https://github.com/ytspar/ristrettogram/blob/master/source/docs/images/logo-heading-general.png)
 
 
 # [@ristrettogram](http://twitter.com/ristrettogram)
